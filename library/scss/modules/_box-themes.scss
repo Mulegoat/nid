@@ -1,0 +1,73 @@
+/******************************************************************
+Site Name: Nigel Irens Design
+Author: Marco Terrinoni (MULARAM)
+
+Stylesheet: Box Theme Module Stylesheet
+
+******************************************************************/
+
+.box--theme1{
+	background:none;
+	color: white;
+	//height: 100%;
+
+	.header-link{
+		color: white;
+	}
+}
+
+.box--theme3{
+	background:white;
+	color: $black;
+	//height: 100%;
+
+	.header-link{
+		color:black !important;
+	}
+}
+.box--theme3__listItem{
+	font-weight: 100;
+	list-style: disc;
+	margin-left: $margin;
+	font-size:90%;
+}
+.box--theme4{
+	background: $link-color;
+	color: white;
+	height: 100%;
+}
+.box--theme5{
+	background:$black;
+	border-left:5px solid $red;
+	@include background-opacity($black, 0.65);
+	color: white;
+	//height: 100%;
+
+	.header-link{
+		color: white;
+		font-weight: 100;
+		text-shadow: 2px 5px 0 rgba(0,0,0,0.5);
+	}
+}
+.box--theme6{
+	background:$black;
+	@include background-opacity(black, 0.75);
+	color: white;
+	// height: 100%;
+
+	.header-link{
+		color: white;
+	}
+}
+.box--theme7{
+	background:white;
+	@include background-opacity(white, 0.85);
+	color: $black;
+
+	.header-link{
+		color:black;
+		&:hover,&:focus{
+			color: $black;
+		}
+	}
+}

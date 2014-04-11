@@ -1,0 +1,176 @@
+/******************************************************************
+Site Name: Nigel Irens Design
+Author: Marco Terrinoni (MULARAM)
+
+Stylesheet: Project Page Nav Module Stylesheet
+
+******************************************************************/
+
+/******************************************************************
+PAGE NAVI STYLES
+******************************************************************/
+#page-nav{
+	display: none;
+}
+.page-navigation,
+.wp-prev-next {
+	margin: 1.1em 0 2.2em;
+}
+.bones_page_navi {
+
+	li {
+		float: left;
+		margin-left: 10px;
+
+		a {
+			padding: 3px 6px;
+			display: block;
+			text-decoration: none;
+			position: relative;
+
+			&:hover,
+			&:focus {
+				color: $link-color;
+			}
+		}
+
+	}
+
+	/* current page link */
+	li.bpn-current {
+		padding: 3px 6px;
+		border-bottom: 2px solid #f01d4f;
+		position: relative;
+
+		a {
+			/* hovering on current page link */
+			&:hover,
+			&:focus {}
+
+		}
+
+	} /* end .bones_page_navi .bpn-current */
+
+	/* common styles for page-navi links */
+	li.bpn-prev-link,
+	li.bpn-next-link {
+		font-weight: 700;
+
+		a {
+			padding: 0;
+		}
+	}
+
+	/* remove the bg on end links */
+	li.bpn-prev-link a:hover,
+	li.bpn-next-link a:hover,
+	li.bpn-first-page-link a:hover,
+	li.bpn-last-page-link a:hover {
+		background: none;
+	}
+
+	/* previous link */
+	li.bpn-prev-link {
+		a {
+			&:hover,
+			&:focus {}
+		}
+	}
+
+	/* next page link */
+	li.bpn-next-link {
+		a {
+			&:hover,
+			&:focus {}
+		}
+	}
+
+	/* first page link */
+	li.bpn-first-page-link {
+		a {
+			&:hover,
+			&:focus {}
+		}
+	}
+
+	/* last page link */
+	li.bpn-last-page-link {
+		a {
+			&:hover,
+			&:focus {}
+		}
+	}
+
+} /* end .bones_page_navi */
+
+/* fallback previous & next links */
+.wp-prev-next {
+
+	ul {}
+
+	.prev-link {
+		float: left;
+	}
+
+	.next-link {
+		float: right;
+	}
+
+} /* end .wp-prev-next */
+
+
+/******************************************************************
+PROJECT NAVI STYLES
+******************************************************************/
+
+.arrow-icons {
+	display:block;
+	margin:0em auto !important;
+	height:auto;
+	text-align: center;
+}
+	.icon-page-navi{
+		float: left;
+		width:50px;
+		height: 50px;
+		list-style:none;
+		font-size:30px;
+		line-height: 50px;
+		display:inline-block;
+		background: lighten($light-grey, 5%);
+
+
+		a{
+			color: $grey;
+			float: left;
+			text-align: center;
+			width:50px;
+
+			&:hover,&:focus{
+				background:white;
+				color: darken($grey, 10%);
+			}
+		}
+		.next-page-anchor:before{
+			content: "\e600";
+		}
+		.prev-page-anchor:before{
+			content: "\e601";
+		}
+	}
+
+
+@media only screen and (min-width: 1240px) {
+
+	.icon-page-navi{
+		width:76.25px;
+		height: 76.25px;
+		font-size:54px;
+		line-height: 76.25px;
+
+		a{
+			width:76.25px;
+		}
+	}
+
+}

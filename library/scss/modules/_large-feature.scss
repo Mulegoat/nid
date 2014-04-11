@@ -1,0 +1,169 @@
+/******************************************************************
+Site Name: Nigel Irens Design
+Author: Marco Terrinoni (MULARAM)
+
+
+Stylesheet: Related Project Module Stylesheet
+
+******************************************************************/
+.large{
+	float: left;
+	position: relative;
+	height:auto;
+	overflow:hidden;
+	width:100%;
+	margin:0;
+	padding:0;
+}
+
+.large__article{
+	position:relative;
+	font-size:100%;
+	font-weight:100;
+}
+
+.large-content{
+	margin:0 !important;
+	float: left;
+}
+.large-content__aside{
+	width:50%;
+	float: left;
+	position: relative;
+}
+
+.large__article__body{
+	position:absolute;
+	width:50%;
+	padding:1.25em;
+}
+.large__article__excerpt{
+	display: none;
+}
+
+
+.large__article__thumb{
+	float: left;
+	position:relative;
+}
+
+
+.button--large__article{
+	margin-top:0;
+}
+
+.wp-post-image{
+	margin: 0;
+	width: 100%;
+	height: auto;
+	position: static;
+	display: block;
+}
+
+
+
+.media_cta {
+	position: absolute;
+	top: 20px;
+	right: 20px;
+	width: 52px;
+	height: 52px;
+	line-height:32px;
+}
+
+@media only screen and (min-width: 481px) {
+
+	.large__article__excerpt{
+		display: block;
+		font-size:0.85em;
+	}
+	.project-excerpt{
+		display: none !important;
+	}
+
+
+}
+
+@media only screen and (min-width: 768px) {
+
+
+		.large{
+
+			.even{
+				width:100%;
+				float: left;
+				padding-right: 0;
+
+				.large__article__body{
+					left:0;
+				}
+			}
+			.odd{
+				width:100%;
+				float: right;
+				padding-left: 0;
+
+				.large__article__body{
+					right:0;
+				}
+			}
+		}
+
+		.large__article__thumb{
+			width:100%;
+		}
+		.large__article__body{
+			width:50%;
+			padding:2.5em;
+		}
+
+		.large__article__excerpt{
+			display: block;
+			font-size:1em;
+		}
+
+		.box__copy{
+			width:50% !important;
+			height:50%;
+			bottom:0;
+		}
+
+}
+@media only screen and (min-width: 1030px) {
+
+	.project-excerpt{
+		display: block !important;
+	}
+
+}
+
+@media only screen and (min-width: 1240px) {
+
+	.large{
+		width:50%;
+	}
+
+	.large-content__aside{
+
+	}
+
+
+
+}
+
+@media only screen and (min-width: 1800px) {
+
+	.large{
+		margin:0;
+		padding:0;
+
+		.even{
+			padding-right: 0;
+		}
+		.odd{
+			padding-left: 0;
+		}
+	}
+}
+
+

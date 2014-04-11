@@ -1,0 +1,276 @@
+/*
+	jQuery.mmenu fullscreen extension CSS
+*/
+/* line 21, ../../../../scss/modules/gui/inc/_sizing.scss */
+html.mm-opened.mm-opening.mm-fullscreen .mm-page,
+html.mm-opened.mm-opening.mm-fullscreen #mm-blocker,
+html.mm-opened.mm-opening.mm-fullscreen .mm-fixed-top,
+html.mm-opened.mm-opening.mm-fullscreen .mm-fixed-bottom {
+  left: 100%;
+}
+
+/* line 26, ../../../../scss/modules/gui/inc/_sizing.scss */
+.mm-menu.mm-fullscreen {
+  width: 100%;
+}
+
+@media all and (max-width: 140px) {
+  /* line 31, ../../../../scss/modules/gui/inc/_sizing.scss */
+  .mm-menu.mm-fullscreen {
+    width: 140px;
+  }
+
+  /* line 40, ../../../../scss/modules/gui/inc/_sizing.scss */
+  html.mm-opened.mm-opening.mm-fullscreen .mm-page,
+  html.mm-opened.mm-opening.mm-fullscreen #mm-blocker,
+  html.mm-opened.mm-opening.mm-fullscreen .mm-fixed-top,
+  html.mm-opened.mm-opening.mm-fullscreen .mm-fixed-bottom {
+    left: 140px;
+  }
+}
+@media all and (min-width: 10000px) {
+  /* line 47, ../../../../scss/modules/gui/inc/_sizing.scss */
+  .mm-menu.mm-fullscreen {
+    width: 10000px;
+  }
+
+  /* line 56, ../../../../scss/modules/gui/inc/_sizing.scss */
+  html.mm-opened.mm-opening.mm-fullscreen .mm-page,
+  html.mm-opened.mm-opening.mm-fullscreen #mm-blocker,
+  html.mm-opened.mm-opening.mm-fullscreen .mm-fixed-top,
+  html.mm-opened.mm-opening.mm-fullscreen .mm-fixed-bottom {
+    left: 10000px;
+  }
+}
+/* line 70, ../../../../scss/modules/gui/inc/_sizing.scss */
+.mm-menu.mm-top.mm-fullscreen {
+  height: 100%;
+}
+
+/* line 78, ../../../../scss/modules/gui/inc/_sizing.scss */
+html.mm-top.mm-opened.mm-opening.mm-fullscreen .mm-page,
+html.mm-top.mm-opened.mm-opening.mm-fullscreen #mm-blocker,
+html.mm-top.mm-opened.mm-opening.mm-fullscreen .mm-fixed-top {
+  top: 100%;
+}
+/* line 82, ../../../../scss/modules/gui/inc/_sizing.scss */
+html.mm-top.mm-opened.mm-opening.mm-fullscreen .mm-fixed-bottom {
+  bottom: -100%;
+}
+
+@media all and (max-height: 140px) {
+  /* line 88, ../../../../scss/modules/gui/inc/_sizing.scss */
+  .mm-menu.mm-top.mm-fullscreen {
+    height: 140px;
+  }
+
+  /* line 96, ../../../../scss/modules/gui/inc/_sizing.scss */
+  html.mm-top.mm-opened.mm-opening.mm-fullscreen .mm-page,
+  html.mm-top.mm-opened.mm-opening.mm-fullscreen #mm-blocker,
+  html.mm-top.mm-opened.mm-opening.mm-fullscreen .mm-fixed-top {
+    top: 140px;
+  }
+  /* line 100, ../../../../scss/modules/gui/inc/_sizing.scss */
+  html.mm-top.mm-opened.mm-opening.mm-fullscreen .mm-fixed-bottom {
+    bottom: -140px;
+  }
+}
+@media all and (min-height: 10000px) {
+  /* line 107, ../../../../scss/modules/gui/inc/_sizing.scss */
+  .mm-menu.mm-top.mm-fullscreen {
+    height: 10000px;
+  }
+
+  /* line 115, ../../../../scss/modules/gui/inc/_sizing.scss */
+  html.mm-top.mm-opened.mm-opening.mm-fullscreen .mm-page,
+  html.mm-top.mm-opened.mm-opening.mm-fullscreen #mm-blocker,
+  html.mm-top.mm-opened.mm-opening.mm-fullscreen .mm-fixed-top {
+    top: 10000px;
+  }
+  /* line 119, ../../../../scss/modules/gui/inc/_sizing.scss */
+  html.mm-top.mm-opened.mm-opening.mm-fullscreen .mm-fixed-bottom {
+    bottom: -10000px;
+  }
+}
+/* line 127, ../../../../scss/modules/gui/inc/_sizing.scss */
+.mm-menu.mm-right.mm-fullscreen {
+  width: 100%;
+}
+
+/* line 136, ../../../../scss/modules/gui/inc/_sizing.scss */
+html.mm-right.mm-opened.mm-opening.mm-fullscreen .mm-page,
+html.mm-right.mm-opened.mm-opening.mm-fullscreen #mm-blocker,
+html.mm-right.mm-opened.mm-opening.mm-fullscreen .mm-fixed-top,
+html.mm-right.mm-opened.mm-opening.mm-fullscreen .mm-fixed-bottom {
+  right: 100%;
+}
+
+@media all and (max-width: 140px) {
+  /* line 142, ../../../../scss/modules/gui/inc/_sizing.scss */
+  .mm-menu.mm-right.mm-fullscreen {
+    width: 140px;
+  }
+
+  /* line 151, ../../../../scss/modules/gui/inc/_sizing.scss */
+  html.mm-right.mm-opened.mm-opening.mm-fullscreen .mm-page,
+  html.mm-right.mm-opened.mm-opening.mm-fullscreen #mm-blocker,
+  html.mm-right.mm-opened.mm-opening.mm-fullscreen .mm-fixed-top,
+  html.mm-right.mm-opened.mm-opening.mm-fullscreen .mm-fixed-bottom {
+    right: 140px;
+  }
+}
+@media all and (min-width: 10000px) {
+  /* line 158, ../../../../scss/modules/gui/inc/_sizing.scss */
+  .mm-menu.mm-right.mm-fullscreen {
+    width: 10000px;
+  }
+
+  /* line 167, ../../../../scss/modules/gui/inc/_sizing.scss */
+  html.mm-right.mm-opened.mm-opening.mm-fullscreen .mm-page,
+  html.mm-right.mm-opened.mm-opening.mm-fullscreen #mm-blocker,
+  html.mm-right.mm-opened.mm-opening.mm-fullscreen .mm-fixed-top,
+  html.mm-right.mm-opened.mm-opening.mm-fullscreen .mm-fixed-bottom {
+    right: 10000px;
+  }
+}
+/* line 175, ../../../../scss/modules/gui/inc/_sizing.scss */
+.mm-menu.mm-bottom.mm-fullscreen {
+  height: 100%;
+}
+
+/* line 183, ../../../../scss/modules/gui/inc/_sizing.scss */
+html.mm-bottom.mm-opened.mm-opening.mm-fullscreen .mm-page,
+html.mm-bottom.mm-opened.mm-opening.mm-fullscreen #mm-blocker,
+html.mm-bottom.mm-opened.mm-opening.mm-fullscreen .mm-fixed-bottom {
+  bottom: 100%;
+}
+/* line 187, ../../../../scss/modules/gui/inc/_sizing.scss */
+html.mm-bottom.mm-opened.mm-opening.mm-fullscreen .mm-fixed-top {
+  top: -100%;
+}
+
+@media all and (max-height: 140px) {
+  /* line 193, ../../../../scss/modules/gui/inc/_sizing.scss */
+  .mm-menu.mm-bottom.mm-fullscreen {
+    height: 140px;
+  }
+
+  /* line 201, ../../../../scss/modules/gui/inc/_sizing.scss */
+  html.mm-bottom.mm-opened.mm-opening.mm-fullscreen .mm-page,
+  html.mm-bottom.mm-opened.mm-opening.mm-fullscreen #mm-blocker,
+  html.mm-bottom.mm-opened.mm-opening.mm-fullscreen .mm-fixed-bottom {
+    bottom: 140px;
+  }
+  /* line 205, ../../../../scss/modules/gui/inc/_sizing.scss */
+  html.mm-bottom.mm-opened.mm-opening.mm-fullscreen .mm-fixed-top {
+    top: -140px;
+  }
+}
+@media all and (min-height: 10000px) {
+  /* line 212, ../../../../scss/modules/gui/inc/_sizing.scss */
+  .mm-menu.mm-bottom.mm-fullscreen {
+    height: 10000px;
+  }
+
+  /* line 220, ../../../../scss/modules/gui/inc/_sizing.scss */
+  html.mm-bottom.mm-opened.mm-opening.mm-fullscreen .mm-page,
+  html.mm-bottom.mm-opened.mm-opening.mm-fullscreen #mm-blocker,
+  html.mm-bottom.mm-opened.mm-opening.mm-fullscreen .mm-fixed-bottom {
+    bottom: 10000px;
+  }
+  /* line 224, ../../../../scss/modules/gui/inc/_sizing.scss */
+  html.mm-bottom.mm-opened.mm-opening.mm-fullscreen .mm-fixed-top {
+    top: -10000px;
+  }
+}
+/* line 241, ../../../../scss/modules/gui/inc/_sizing.scss */
+.mm-menu.mm-fullscreen.mm-front, .mm-menu.mm-fullscreen.mm-next {
+  left: -100%;
+}
+
+@media all and (max-width: 140px) {
+  /* line 250, ../../../../scss/modules/gui/inc/_sizing.scss */
+  .mm-menu.mm-fullscreen.mm-front, .mm-menu.mm-fullscreen.mm-next {
+    left: -140px;
+  }
+}
+@media all and (min-width: 10000px) {
+  /* line 260, ../../../../scss/modules/gui/inc/_sizing.scss */
+  .mm-menu.mm-fullscreen.mm-front, .mm-menu.mm-fullscreen.mm-next {
+    left: -10000px;
+  }
+}
+/* line 271, ../../../../scss/modules/gui/inc/_sizing.scss */
+.mm-menu.mm-top.mm-fullscreen.mm-front, .mm-menu.mm-top.mm-fullscreen.mm-next {
+  top: -100%;
+}
+
+@media all and (max-height: 140px) {
+  /* line 280, ../../../../scss/modules/gui/inc/_sizing.scss */
+  .mm-menu.mm-top.mm-fullscreen.mm-front, .mm-menu.mm-top.mm-fullscreen.mm-next {
+    top: -140px;
+  }
+}
+@media all and (min-height: 10000px) {
+  /* line 290, ../../../../scss/modules/gui/inc/_sizing.scss */
+  .mm-menu.mm-top.mm-fullscreen.mm-front, .mm-menu.mm-top.mm-fullscreen.mm-next {
+    top: -10000px;
+  }
+}
+/* line 301, ../../../../scss/modules/gui/inc/_sizing.scss */
+.mm-menu.mm-right.mm-fullscreen.mm-front, .mm-menu.mm-right.mm-fullscreen.mm-next {
+  right: -100%;
+}
+
+@media all and (max-width: 140px) {
+  /* line 310, ../../../../scss/modules/gui/inc/_sizing.scss */
+  .mm-menu.mm-right.mm-fullscreen.mm-front, .mm-menu.mm-right.mm-fullscreen.mm-next {
+    right: -140px;
+  }
+}
+@media all and (min-width: 10000px) {
+  /* line 320, ../../../../scss/modules/gui/inc/_sizing.scss */
+  .mm-menu.mm-right.mm-fullscreen.mm-front, .mm-menu.mm-right.mm-fullscreen.mm-next {
+    right: -10000px;
+  }
+}
+/* line 331, ../../../../scss/modules/gui/inc/_sizing.scss */
+.mm-menu.mm-bottom.mm-fullscreen.mm-front, .mm-menu.mm-bottom.mm-fullscreen.mm-next {
+  bottom: -100%;
+}
+
+@media all and (max-height: 140px) {
+  /* line 340, ../../../../scss/modules/gui/inc/_sizing.scss */
+  .mm-menu.mm-bottom.mm-fullscreen.mm-front, .mm-menu.mm-bottom.mm-fullscreen.mm-next {
+    bottom: -140px;
+  }
+}
+@media all and (min-height: 10000px) {
+  /* line 350, ../../../../scss/modules/gui/inc/_sizing.scss */
+  .mm-menu.mm-bottom.mm-fullscreen.mm-front, .mm-menu.mm-bottom.mm-fullscreen.mm-next {
+    bottom: -10000px;
+  }
+}
+/* line 363, ../../../../scss/modules/gui/inc/_sizing.scss */
+html.mm-opened.mm-front .mm-fixed-top,
+html.mm-opened.mm-front .mm-fixed-bottom,
+html.mm-opened.mm-opening.mm-front .mm-fixed-top,
+html.mm-opened.mm-opening.mm-front .mm-fixed-bottom {
+  left: 0;
+  right: auto;
+}
+/* line 368, ../../../../scss/modules/gui/inc/_sizing.scss */
+html.mm-opened.mm-front .mm-fixed-top,
+html.mm-opened.mm-opening.mm-front .mm-fixed-top {
+  top: 0;
+}
+/* line 372, ../../../../scss/modules/gui/inc/_sizing.scss */
+html.mm-opened.mm-front .mm-fixed-bottom,
+html.mm-opened.mm-opening.mm-front .mm-fixed-bottom {
+  bottom: 0;
+}
+
+/* line 28, ../../../../scss/modules/gui/extensions/jquery.mmenu.fullscreen.scss */
+html.mm-opened.mm-fullscreen .mm-page {
+  box-shadow: none !important;
+}

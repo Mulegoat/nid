@@ -1,0 +1,85 @@
+/******************************************************************
+Site Name: Nigel Irens Design
+Author: Marco Terrinoni (MULARAM)
+
+Stylesheet: Connect Links Module Stylesheet
+
+******************************************************************/
+.connect{
+	position:relative;
+	top:auto;
+	bottom:0px;
+	right:0;
+	width:100%;
+	background:$black;
+}
+.connect-links__list{
+	margin:0;
+}
+.connect-links{
+	margin:0 auto;
+	display: block;
+	float: none;
+	text-align: center !important;
+
+	.connect-links__item{
+		list-style:none;
+		display: inline-block;
+		height: 50px;
+		margin:0px;
+		font-size: 26px;
+
+
+		.connect-links__item__icon{
+			color:$white;
+			width:50px;
+			background: none;
+			display:inline-block;
+			line-height:50px !important;
+			text-align: center;
+			font-weight:300;
+
+			&:hover {
+				background:$red;
+				color: white;
+				font-weight: 300;
+			}
+		}
+	}
+
+}
+.connect__cta{
+	background:$red;
+	color:$black;
+	line-height:50px;
+	text-transform: uppercase;
+	text-align: center;
+	font-size:18px;
+	width:100%;
+	display: none;
+}
+
+@media only screen and (min-width: 768px) {
+
+}
+
+@media only screen and (min-width: 1030px) {
+
+
+
+}
+
+@media only screen and (min-width: 1240px) {
+
+
+
+	.connect{
+		padding-left:170px;
+	}
+
+
+}
+
+@media only screen and (min-width: 1800px) {
+
+}

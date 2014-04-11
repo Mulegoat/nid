@@ -1,0 +1,63 @@
+/******************************************************************
+Site Name: Nigel Irens Design
+Author: Marco Terrinoni (MULARAM)
+
+Stylesheet: Blog Post Module Stylesheet
+
+******************************************************************/
+
+
+
+.blogCover__excerpt{
+	display: none;
+}
+.blogCover__header{
+	padding:$padding*2;
+}
+
+.blog__scrollTo{
+	font-size:2em;
+}
+.single p{
+	margin-bottom:1em;
+}
+.wp-post-image{
+	width:100%;
+	height: auto;
+	position: relative;
+	display: block;
+}
+.blog__intro{
+	position: relative;
+}
+
+@media only screen and (min-width: 768px) {
+	.blogCover {
+		position: absolute;
+		left: 0;
+		right: 0;
+		bottom: 0px;
+		margin:0 auto;
+		width:50%;
+	}
+
+	.blog__header{
+		height: 100%;
+	}
+
+}
+
+@media only screen and (min-width: 1030px) {
+	.blogCover {
+	}
+
+}
+
+@media only screen and (min-width: 1240px) {
+
+
+}
+
+@media only screen and (min-width: 1800px) {
+
+}

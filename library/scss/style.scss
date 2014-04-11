@@ -1,0 +1,253 @@
+/******************************************************************
+Site Name: Nigel Irens Design
+Author: Marco Terrinoni (MULARAM)
+
+
+Stylesheet: Main Stylesheet
+
+Here's where the magic happens. Here, you'll see we are calling in
+the separate media queries. The base mobile goes outside any query
+and is called at the beginning, after that we call the rest
+of the styles inside media queries.
+******************************************************************/
+
+
+//
+// IMPORTING STYLES
+//
+// import variables
+@import "base/variables";
+
+// import normalize
+@import "base/normalize";
+
+// import generic
+@import "base/generic";
+
+// import mixins
+@import "base/mixins";
+
+// import zen
+//@import "layout/zen";
+
+// import grids
+@import "layout/grid";
+
+/*
+BASE (MOBILE) SIZE
+This are the mobile styles. It's what people see on their phones. If
+you set a great foundation, you won't need to add too many styles in
+the other stylesheets. Remember, keep it light: Speed is Important.
+*/
+
+// styles in base.scss
+@import "states/base";
+
+// import alerts
+@import "states/alerts";
+
+// import 404
+@import "modules/404";
+
+// import typography
+@import "modules/typography";
+
+// import box themes
+@import "modules/box-themes";
+
+// import icon fonts
+@import "modules/icons";
+
+// import buttons
+@import "modules/buttons";
+
+// import forms
+//@import "modules/forms";
+
+// import comments
+//@import "modules/comments";
+
+// import sliders
+@import "modules/sliders";
+
+// import footer
+@import "modules/footer";
+
+// import header
+@import "modules/header";
+
+// import sidebars
+//@import "modules/sidebars";
+
+// import loader
+//@import "modules/loader";
+
+// import related items
+//@import "modules/related-project";
+
+// import project-list
+@import "modules/project-list";
+
+// import news-list
+@import "modules/news-list";
+
+// import related news
+//@import "modules/related-news";
+
+// import article archive
+//@import "modules/article-archive";
+
+// import byline
+@import "modules/byline";
+
+// import blog post
+@import "modules/blog-post";
+
+// import share buttons
+@import "modules/share-content";
+
+// import share buttons
+@import "modules/tags";
+
+// import project-list
+@import "modules/project";
+
+// import large-feature
+//@import "modules/large-feature";
+
+// import page-nav
+@import "modules/page-nav";
+
+// import page-header
+@import "modules/page-header";
+
+// import testimonial
+//@import "modules/testimonial";
+
+//import mobile.scss
+@import "modules/nav/jquery.mmenu";
+
+//import mobile nav extensions
+@import "modules/nav/extensions/jquery.mmenu.positioning";
+
+// import main nav
+@import "modules/main-nav";
+
+// import breadcrumbs
+//@import "modules/breadcrumbs";
+
+// import map
+@import "modules/map";
+
+// import staff profile
+@import "modules/staff-profile";
+
+// import connect links
+@import "modules/connect-links";
+
+/*
+LARGER MOBILE DEVICES
+This is for devices like the Galaxy Note or something that's
+larger than an iPhone but smaller than a tablet. Let's call them
+tweeners.
+*/
+@media only screen and (min-width: 481px) {
+
+	// styles in 481up.scss
+	@import "states/481up";
+
+} // end of media query
+
+/*
+TABLET & SMALLER LAPTOPS
+This is the average viewing window. So Desktops, Laptops, and
+in general anyone not viewing on a mobile device. Here's where
+you can add resource intensive styles.
+*/
+@media only screen and (min-width: 768px) {
+
+	// import grids
+	//@import "layout/grid-squares";
+
+	// styles in 768up.scss
+	@import "states/768up";
+
+} // end of media query
+
+/*
+DESKTOP
+This is the average viewing window. So Desktops, Laptops, and
+in general anyone not viewing on a mobile device. Here's where
+you can add resource intensive styles.
+*/
+
+@media only screen and (min-width: 1030px) {
+
+	// styles in 1030up.scss
+	@import "states/1030up";
+
+	// import scrollpane
+	@import "modules/scroll";
+
+} // end of media query
+
+/*
+MEDIUM VIEWING SIZE
+This is for the larger monitors and possibly full screen viewers.
+*/
+@media only screen and (min-width: 1240px) {
+
+	// styles in 1240up.scss
+	@import "states/1240up";
+
+	// import scroll-nav
+	@import "modules/scroll-nav";
+
+} // end of media query
+
+/*
+LARGE VIEWING SIZE
+This is for the larger monitors and possibly full screen viewers.
+*/
+@media only screen and (min-width: 1800px) {
+
+	// styles in 1240up.scss
+	@import "states/1800up";
+
+} // end of media query
+
+
+/*
+RETINA (2x RESOLUTION DEVICES)
+This applies to the retina iPhone (4s) and iPad (2,3) along with
+other displays with a 2x resolution. You can also create a media
+query for retina AND a certain size if you want. Go Nuts.
+*/
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5),
+       only screen and (min--moz-device-pixel-ratio: 1.5),
+       only screen and (min-device-pixel-ratio: 1.5) {
+
+	// styles in 2x.scss
+	@import "states/2x";
+
+} // end of media query
+
+/*
+iPHONE 5 MEDIA QUERY
+Want to get fancy for no good reason? Knock yourself out.
+*/
+@media (device-height: 568px) and (-webkit-min-device-pixel-ratio: 2) {
+
+  // iPhone 5 or iPod Touch 5th generation styles (you can include your own file if you want)
+
+}
+
+/*
+PRINT STYLESHEET
+Feel free to customize this. Remember to add things that won't make
+sense to print at the bottom. Things like nav, ads, and forms should
+be set to display none.
+*/
+@media print {
+	//@import "states/print";
+}

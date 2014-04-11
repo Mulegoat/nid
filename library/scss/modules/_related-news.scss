@@ -1,0 +1,50 @@
+/******************************************************************
+Site Name: Nigel Irens Design
+Author: Marco Terrinoni (MULARAM)
+
+
+Stylesheet: Related News Widget Module Stylesheet
+
+******************************************************************/
+.widget_categoryposts {
+
+	li.cat-post-item {
+		list-style: disc;
+		margin-left:1em;
+
+		a.post-title{
+			color:$white;
+			font-size:90%;
+		}
+
+	}
+	li.cat-post-item a:hover{
+		color:$bones-light-grey;
+
+	}
+	li {
+
+		&:first-child {}
+
+		&:last-child {}
+
+		a {
+			img{width:100%;height:auto; margin: 0.5em 0 0 0;}
+		}
+
+		/* deep nesting */
+		ul {}
+
+	}
+
+}
+
+@media only screen and (min-width: 768px) {
+
+}
+
+@media only screen and (min-width: 1800px) {
+
+}
+
+

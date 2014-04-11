@@ -1,0 +1,96 @@
+/******************************************************************
+Site Name: Nigel Irens Design
+Author: Marco Terrinoni (MULARAM)
+
+Stylesheet: Header Module Stylesheet
+
+******************************************************************/
+
+
+.header {
+	background:$black;
+	display: block;
+	width:100%;
+	z-index: 100;
+}
+
+
+.header__logo{
+	width:80px;
+	height: 80px;
+	display: block;
+	margin:0;
+	float: none;
+
+
+	a{
+		width:80px;
+		height:80px;
+		display: block;
+		background:url('../images/x2/logo_320up.svg') no-repeat;
+		float: none;
+		margin:0 auto;
+		padding:$padding;
+	}
+}
+
+@media only screen and (min-width: 768px) {
+
+	.header{
+		@include css-gradient(#14100f,#2a2424);
+	}
+
+
+	.header__logo{
+		width:112px;
+		height: 100px;
+		margin:0;
+		float: none;
+
+		a{
+			width:112px;
+			height:100px;
+			background:url('../images/logo_768up.png') no-repeat;
+		}
+	}
+}
+
+@media only screen and (min-width: 1240px) {
+
+	.header{
+		position: fixed;
+		z-index:4;
+		top:0;
+		bottom: 0;
+		height: 100%;
+		width: 170px;
+	}
+
+
+	.header__logo{
+		position: absolute;
+		top:0;
+		left: 0;
+		width:170px;
+		height:150px;
+
+		a{
+			width:170px;
+			height:150px;
+			display: block;
+			background:url('../images/logo.svg') no-repeat;
+			float: left;
+		}
+	}
+
+}
+@media only screen and (min-width: 1800px) {
+
+	.header{
+		width: 250px;
+	}
+
+	.header__logo{
+		margin:40px;
+	}
+}

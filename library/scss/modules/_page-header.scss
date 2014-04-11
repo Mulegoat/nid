@@ -1,0 +1,63 @@
+/******************************************************************
+Site Name: Nigel Irens Design
+Author: Marco Terrinoni (MULARAM)
+
+Stylesheet: Page Header Module Stylesheet
+
+******************************************************************/
+
+
+.page-title--news{
+	position: relative;
+	left: 100%;
+	display: inline-block;
+	z-index: 11;
+	padding: 0 1em;
+	background: $link-color;
+	color: white;
+}
+
+.single-title{
+	line-height:1.5em;
+	margin-bottom:0.5em;
+}
+
+.archive-title{
+	display: inline-block;
+}
+.archive-header{
+	margin: 0 0 0.25em 0;
+}
+
+.custom-post-type-title{
+	line-height: 1.25em;
+	margin:0.5em 0 0.25em 0;
+}
+.slide-title{
+	line-height:1.25em;
+	font-size: 1.75em;
+	margin:0.25em 0;
+}
+
+
+@media only screen and (min-width: 481px) {
+
+}
+
+@media only screen and (min-width: 768px) {
+
+	.slide-title{
+		font-size: 3.5em;
+	}
+
+}
+@media only screen and (min-width: 1030px) {
+
+
+}
+@media only screen and (min-width: 1240px) {
+
+}
+@media only screen and (min-width: 1800px) {
+
+}

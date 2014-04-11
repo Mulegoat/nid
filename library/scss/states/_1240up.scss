@@ -1,0 +1,38 @@
+/******************************************************************
+Site Name: Nigel Irens Design
+Author: Marco Terrinoni (MULARAM)
+
+Stylesheet: Super Large Monitor Stylesheet
+
+You can add some advanced styles here if you like. This kicks in
+on larger screens.
+
+******************************************************************/
+.logged-in{
+	body{
+		top: 32px;
+	}
+}
+
+/*********************
+MENU OPEN STATE
+*********************/
+
+
+
+
+/*********************
+LAYOUT & GRID STYLES
+*********************/
+
+html,body{
+	height: 100%;
+}
+
+.inner-wrap{
+	padding:1em;
+}
+
+.island{
+	position: relative;
+}

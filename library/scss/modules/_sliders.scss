@@ -1,0 +1,528 @@
+/******************************************************************
+Site Name: Nigel Irens Design
+Author: Marco Terrinoni (MULARAM)
+
+Stylesheet: Image Slider Module Stylesheet
+
+******************************************************************/
+
+.slider{
+	overflow: hidden;
+	position: relative;
+}
+.rsContent{
+	overflow: hidden;
+	@include opacity(100);
+}
+.videoContainer{
+	width:100%;
+	height: 100%;
+}
+.fluid-width-video-wrapper{
+	max-height: 100%;
+}
+
+/******************************
+*
+*  RoyalSlider Default Skin
+*
+*    1. Arrows
+*    2. Bullets
+*    3. Thumbnails
+*    4. Tabs
+*    5. Fullscreen button
+*    6. Play/close video button
+*    7. Preloader
+*    8. Caption
+*
+*  Sprite: 'rs-custom-png'
+*  Feel free to edit anything
+*  If you don't some part - just delete it
+*
+******************************/
+
+
+/* Background */
+.myCustomSkin,
+.myCustomSkin .rsOverflow,
+.myCustomSkin .rsSlide,
+.myCustomSkin .rsVideoFrameHolder,
+.myCustomSkin .rsThumbs {
+	background: #2a2424;
+	color: white;
+}
+
+/*********************
+SLIDER HEADERS
+*********************/
+.heroHeader{
+	position: absolute;
+	z-index: 10;
+	left: 0;
+	top:15%;
+    display: block;
+    padding:0 2em;
+    opacity: 1;
+
+
+    .project-excerpt{
+    	text-transform: capitalize;
+    }
+
+}
+
+
+/***************
+*
+*  1. Arrows
+*
+****************/
+.myCustomSkin .rsArrow {
+	display: none;
+}
+@media only screen and (min-width: 768px) {
+
+	.heroHeader{
+		position: absolute;
+		width:auto;
+		max-width: 50%;
+		//background: $red;
+
+		background-image: -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(0%, #2a2424), color-stop(100%, $transparent));
+		background-image: -webkit-linear-gradient(left, #2a2424, $transparent);
+		background-image: -moz-linear-gradient(left, #2a2424, $transparent);
+		background-image: -o-linear-gradient(left, #2a2424, $transparent);
+		background-image: linear-gradient(left, #2a2424, $transparent);
+
+
+		background-image: -webkit-gradient(linear, 0% 0%, 100% 100%, color-stop(0%, #2a2424), color-stop(100%, $transparent));
+		background-image: -webkit-linear-gradient(left top, #2a2424, $transparent);
+		background-image: -moz-linear-gradient(left top, #2a2424, $transparent);
+		background-image: -o-linear-gradient(left top, #2a2424, $transparent);
+		background-image: linear-gradient(left top, #2a2424, $transparent);
+
+	}
+
+	.mobile-only-content{
+		display:block;
+		padding:0;
+		float:left;
+	}
+
+	.myCustomSkin .rsArrow {
+		height: 32px;
+		width: 32px;
+		position: absolute;
+		display: block;
+		cursor: pointer;
+		z-index: 3;
+		text-align: center;
+	}
+	.myCustomSkin.rsVer .rsArrow {
+		width: 100%;
+		height: 32px;
+
+	}
+	.myCustomSkin.rsVer .rsArrowLeft {
+		top: 0;
+		left: 0;
+	}
+	.myCustomSkin.rsVer .rsArrowRight {
+		position: absolute;
+		bottom: 100px;
+		left: 0;
+	}
+
+	.myCustomSkin.rsHor .rsArrowLeft {
+		left: 0;
+		top: 0;
+	}
+	.myCustomSkin.rsHor .rsArrowRight {
+		right: 0;
+		top:0;
+	}
+	.myCustomSkin .rsArrowIcn {
+		font-family: 'icomoon';
+		speak: none;
+		font-style: normal;
+		font-weight: normal;
+		font-variant: normal;
+		text-transform: none;
+		/* Better Font Rendering =========== */
+		-webkit-font-smoothing: antialiased;
+		-moz-osx-font-smoothing: grayscale;
+
+		width: 32px;
+		height: 32px;
+		top: 50%;
+		//left: 50%;
+		margin-top:-16px;
+		margin-left: -16px;
+		font-size:24px;
+		line-height:32px;
+		position: absolute;
+		cursor: pointer;
+		background-color: #000;
+		background-color: rgba(0,0,0,0.75);
+		*background-color: #000;
+	}
+
+
+	.myCustomSkin .rsArrowDisabled .rsArrowIcn {
+		opacity: 1;
+		filter: alpha(opacity=100);  *display: none;
+	}
+
+
+
+	.myCustomSkin .rsArrowIcn:hover {
+		background-color: rgba(0,0,0,0.9);
+	}
+	.myCustomSkin.rsHor .rsArrowLeft .rsArrowIcn:before {
+		content: "\e601";
+	 }
+	.myCustomSkin.rsHor .rsArrowRight .rsArrowIcn:before {
+		content: "\e600";
+	 }
+
+	.myCustomSkin.rsVer .rsArrowLeft .rsArrowIcn:before {
+		content: "\e60a";
+	 }
+	.myCustomSkin.rsVer .rsArrowRight .rsArrowIcn:before {
+		content: "\e606";
+	 }
+}
+
+/***************
+*
+*  2. Bullets
+*
+****************/
+
+.rsBullets{
+	display: none;
+}
+
+/***************
+*
+*  6. Play/close video button
+*
+****************/
+
+.rsUni .rsPlayBtn {
+	-webkit-tap-highlight-color:rgba(0,0,0,0.3);
+	width:64px;
+	height:64px;
+	margin-left:-32px;
+	margin-top:-32px;
+	cursor: pointer;
+}
+.rsUni .rsPlayBtnIcon {
+	width:64px;
+	display:block;
+	height:64px;
+	-webkit-border-radius: 4px;
+	border-radius: 4px;
+
+	-webkit-transition: .3s;
+	-moz-transition: .3s;
+	transition: .3s;
+
+	background:url(rs-universal.png) no-repeat 0 -32px;
+	background-color: #383838;
+	background-color: rgba(0,0,0,0.75);
+	*background-color: #383838;
+}
+.rsUni .rsPlayBtn:hover .rsPlayBtnIcon {
+	background-color: rgba(0,0,0,0.9);
+}
+.rsUni .rsBtnCenterer {
+	position:absolute;
+	left:50%;
+	top:50%;
+	width: 20px;
+	height: 20px;
+}
+.rsUni .rsCloseVideoBtn {
+	right: 0;
+	top: 0;
+	width: 44px;
+	height: 44px;
+	z-index: 500;
+	position: absolute;
+	cursor: pointer;
+	-webkit-backface-visibility: hidden;
+	-webkit-transform: translateZ(0);
+
+}
+.rsUni .rsCloseVideoBtn.rsiOSBtn {
+	top: -38px;
+	right: -6px;
+}
+
+.rsUni .rsCloseVideoIcn {
+	margin: 6px;
+	width: 32px;
+	height: 32px;
+	background: url('rs-universal.png') -64px 0;
+	background-color: #383838;
+	background-color: rgba(0,0,0,0.75);
+	*background-color: #383838;
+}
+.rsUni .rsCloseVideoIcn:hover {
+	background-color: rgba(0,0,0,0.9);
+}
+
+
+
+/***************
+*
+*  7. Preloader
+*
+****************/
+
+.myCustomSkin .rsPreloader {
+	width:64px;
+	height:64px;
+	background-image:url(../images/preloader.GIF);
+	left:50%;
+	top:40%;
+	margin-left:-32px;
+	margin-top:-32px;
+}
+
+
+
+/***************
+*
+* Arrows
+*
+****************/
+
+
+
+/***************
+ Fullscreen button
+****************/
+
+.myCustomSkin .rsFullscreenBtn {
+	right: 0;
+	top: 0;
+	width: 50px;
+	height: 50px;
+	// z-index: 22;
+	display: block;
+	position: absolute;
+	cursor: pointer;
+
+}
+.myCustomSkin .rsFullscreenIcn {
+	display: block;
+	width: 50px;
+	height: 50px;
+	font-size:22px;
+	line-height:50px;
+	background-color: #000;
+	background-color: rgba(0,0,0,0.75);
+	*background-color: #000;
+	text-align: center;
+}
+.myCustomSkin .rsFullscreenIcn:before {
+	content: "\e1bf";
+}
+.myCustomSkin .rsFullscreenIcn:hover {
+	background-color: rgba(0,0,0,0.9);
+}
+.myCustomSkin.rsFullscreen .rsFullscreenIcn:before {
+}
+
+.myCustomSkin .rsTmb {
+	display: none;
+}
+
+/*********************
+NEARBY SLIDES
+*********************/
+.visibleNearbyZoom .rsSlide img {
+	opacity: 1;
+	-webkit-transition: all 0.3s ease-out;
+	-moz-transition: all 0.3s ease-out;
+	transition: all 0.3s ease-out;
+	-webkit-transform: scale(1);
+	-moz-transform: scale(1);
+	-ms-transform: scale(1);
+	-o-transform: scale(1);
+	transform: scale(1);
+}
+
+
+@media only screen and (min-width: 1240px) {
+
+	.heroHeader{
+		top:200px;
+
+	}
+
+	.slider{
+		overflow: hidden;
+		position: relative;
+	}
+
+	.myCustomSkin .rsArrow {
+		height: 50px;
+		width: 50px;
+		position: absolute;
+		display: block;
+		cursor: pointer;
+		// z-index: 21;
+	}
+	.myCustomSkin.rsVer .rsArrow {
+		width: 100%;
+		height: 50px;
+	}
+
+	.myCustomSkin .rsArrowIcn {
+		width: 50px;
+		height: 50px;
+		//left: 50%;
+		margin-top:-25px;
+		margin-left:0;
+		font-size:25px;
+		line-height:50px;
+		background: $link-color;
+		&:hover,&:focus{
+			background:$link-hover;
+		}
+	}
+
+	.myCustomSkin.rsHor .rsArrowRight {
+		right: 0;
+		top:230px;
+	}
+
+	.myCustomSkin.rsHor .rsArrowLeft {
+		left:100%;
+		top:280px;
+		margin-left:-50px;
+	}
+
+	.rsBullets {
+		position: absolute;
+		z-index: 3;
+		top:225px;
+		right:0%;
+		padding: 4px;
+		width: 50px;
+		height:auto;
+		margin: 20px auto;
+		background: $red;
+		float: left;
+		text-align: center;
+		display: inline-block;
+		//display: none;
+		margin: 0;
+		padding: 0;
+		list-style: none;
+		cursor: default;
+		-webkit-touch-callout: none;
+		-webkit-user-select: none;
+		-khtml-user-select: none;
+		-moz-user-select: none;
+		-ms-user-select: none;
+		user-select: none;
+		overflow: hidden;
+	}
+	.rsBullet {
+		display: inline-block;
+		*display:inline;
+		*zoom:1;
+		padding: 5px;
+		position: relative;
+		display: block;
+		float: left;
+		margin: 15px;
+		width: 20px;
+		height: 20px;
+		cursor: pointer;
+		border-radius:50%;
+		box-shadow: 0 0 0 2px rgba(255, 255, 255, 0);
+		-webkit-transition: box-shadow 0.3s ease;
+		transition: box-shadow 0.3s ease;
+
+	}
+
+	.rsBullet.rsNavSelected span {
+		background-color: white;
+		-webkit-transform: scale(0.4);
+		transform: scale(0.4);
+	}
+	.rsBullet.rsNavSelected{
+		box-shadow: 0 0 0 2px white;
+	}
+
+
+	.rsBullet span {
+		display: block;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		outline: none;
+		border-radius: 50%;
+		background-color: #fff;
+		background-color: rgba(255, 255, 255, 0.7);
+		text-indent: -999em; /* make the text accessible to screen readers */
+		cursor: pointer;
+		position: absolute;
+		border: 2px solid #fff;
+		-webkit-transition: border-color 0.3s ease;
+		transition: border-color 0.3s ease;
+
+	}
+
+	.rsBullet span:focus {
+		outline: none;
+	}
+	.rsBullet:nth-child(4n),
+	.rsBullet:nth-child(4n-3) {
+		background-color: rgba(0, 0, 0, 0.05);
+	}
+
+
+
+	.rsBullet span::after {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		visibility: hidden;
+		background: #c44d48;
+		border-radius: 50%;
+		box-shadow: 0 0 1px #c44d48;
+		opacity: 0;
+		-webkit-transform: scale(3);
+		transform: scale(3);
+		-webkit-transition: opacity 0.3s ease, -webkit-transform 0.3s ease, visibility 0s 0.3s;
+		transition: opacity 0.3s ease, transform 0.3s ease, visibility 0s 0.3s;
+	}
+
+	.rsBullet span:hover,
+	.rsBullet span:focus,
+	.rsBullet span.current a {
+		border-color: #c44d48;
+	}
+
+	.rsBullet.current span::after {
+		visibility: visible;
+		opacity: 1;
+		-webkit-transform: scale(1);
+		transform: scale(1);
+		-webkit-transition: opacity 0.3s ease, -webkit-transform 0.3s ease;
+		transition: opacity 0.3s ease, transform 0.3s ease;
+	}
+
+
+
+}

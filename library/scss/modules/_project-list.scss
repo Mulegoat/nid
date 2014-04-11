@@ -1,0 +1,490 @@
+/******************************************************************
+Site Name: Nigel Irens Design
+Author: Marco Terrinoni (MULARAM)
+
+Stylesheet: Project List Module Stylesheet
+
+******************************************************************/
+
+#projects{
+	margin: 0;
+}
+.project-excerpt{
+		color: white;
+	}
+
+	#projects li {
+	    float: left;
+	    padding:0 2px 2px 2px;
+	    list-style: none;
+	}
+
+	.item-project {
+	    position: relative;
+	    overflow: hidden;
+	}
+
+	.item-project .hover-wrap {
+	    position: relative;
+	    overflow: hidden;
+	    width: 100%;
+	    height: 100%;
+	}
+
+
+
+	.grid-portfolio .item-project .project-name,
+	.masonry-portfolio .item-project .project-name {
+	    position: absolute;
+	    top: 0;
+	    z-index: 3;
+	    display: block;
+	    float: left;
+
+	    width: 100%;
+	    height: 100%;
+	    background: rgba(0,0,0,0.75);
+	    border: 0px solid rgba(255, 255, 255, 0.1);
+
+	    opacity: 0;
+
+	    -webkit-transition: opacity 0.3s ease 0s, border 0.3s ease 0s;
+	    transition: opacity 0.3s ease 0s, border 0.3s ease 0s;
+	}
+
+	.item-project .project-name .va,
+	.item-project .project-name .va {
+	    position: absolute;
+	    bottom: 20px;
+	    left: 20px;
+	}
+
+	.item-project .project-name .va .project-title {
+	    display: block;
+	}
+
+	.grid-portfolio .item-project .hover-wrap:hover .project-name,
+	.grid-portfolio .item-project .hover-wrap:active .project-name,
+	.grid-portfolio .item-project .hover-wrap:hover .project-name,
+	.masonry-portfolio .item-project .hover-wrap:hover .project-name,
+	.masonry-portfolio .item-project .hover-wrap:hover .project-name,
+	.masonry-portfolio .item-project .hover-wrap:focus .project-name {
+	    opacity: 1;
+	    border-width: 10px;
+	}
+
+
+
+	.item-project .project-name .va h3 {
+	    margin-bottom:0.25em;
+	    color: #FFFFFF;
+	    text-transform: uppercase;
+	    line-height: 1.5em;
+
+		    a{
+			    //border-bottom:2px solid $light-grey;
+		    }
+	}
+
+	.item-project .project-name h4 {
+	    margin: 10px 0 0;
+	    color: #FFFFFF;
+	    font-weight: 500;
+	    font-size: 14px;
+	    opacity: 0.75;
+	}
+
+	.item-project i {
+	    position: absolute;
+	    top: 0;
+	    right: 0;
+	    z-index: 5;
+	    width: 40px;
+	    height: 40px;
+	    background: $red;
+	    color: #FFFFFF;
+	    text-align: center;
+	    font-size: 16px;
+	    line-height: 38px;
+	    opacity: 0;
+
+	    -webkit-transform: scale(0);
+	    -ms-transform: scale(0);
+	    transform: scale(0);
+
+	    -webkit-transform-origin: 100% 0;
+	    -moz-transform-origin: 100% 0;
+	    -ms-transform-origin: 100% 0;
+	    -o-transform-origin: 100% 0;
+	    transform-origin: 100% 0;
+
+	    -webkit-transition: opacity 0.3s ease 0s, -webkit-transform 0.3s ease 0s;
+	    transition: opacity 0.3s ease 0s, transform 0.3s ease 0s;
+	}
+
+	.item-project .hover-wrap:hover i,
+	.item-project .hover-wrap:active i,
+	.item-project .hover-wrap:focus i {
+	    -webkit-transform: scale(1);
+	    -ms-transform: scale(1);
+	    transform: scale(1);
+
+	    opacity: 1;
+	}
+
+	.item-project .cont:after {
+	    position: absolute;
+	    top: 0;
+	    right: 0;
+	    z-index: 4;
+	    width: 50px;
+	    height: 50px;
+	    border: 2px solid $red;
+	    background: $red;
+	    content: "";
+
+	    opacity: 0.55;
+
+	    -webkit-transition: -webkit-transform 0.3s ease 0.02s;
+	    transition: transform 0.3s ease 0.02s;
+
+	    -webkit-transform: scale(0);
+	    -ms-transform: scale(0);
+	    transform: scale(0);
+
+	    -webkit-transform-origin: 100% 0;
+	    -moz-transform-origin: 100% 0;
+	    -ms-transform-origin: 100% 0;
+	    -o-transform-origin: 100% 0;
+	    transform-origin: 100% 0;
+	}
+
+	.item-project .cont:before {
+	    position: absolute;
+	    top: 0;
+	    right: 0;
+	    z-index: 4;
+	    width: 60px;
+	    height: 60px;
+	    border: 2px solid $red;
+	    background: $red;
+	    content: "";
+
+	    opacity: 0.25;
+
+	    -webkit-transition: -webkit-transform 0.3s ease 0.04s;
+	    transition: transform 0.3s ease 0.04s;
+
+	    -webkit-transform: scale(0);
+	    -ms-transform: scale(0);
+	    transform: scale(0);
+
+	    -webkit-transform-origin: 100% 0;
+	    -moz-transform-origin: 100% 0;
+	    -ms-transform-origin: 100% 0;
+	    -o-transform-origin: 100% 0;
+	    transform-origin: 100% 0;
+	}
+
+	.item-project .hover-wrap:hover .cont:after,
+	.item-project .hover-wrap:active .cont:after,
+	.item-project .hover-wrap:focus .cont:after {
+	    -webkit-transform: scale(1);
+	    -ms-transform: scale(1);
+	    transform: scale(1);
+	}
+
+	.item-project .hover-wrap:hover .cont:before,
+	.item-project .hover-wrap:active .cont:before,
+	.item-project .hover-wrap:focus .cont:before {
+	    -webkit-transform: scale(1);
+	    -ms-transform: scale(1);
+	    transform: scale(1);
+	}
+
+	/* Project Wall Effects */
+
+	.portfolio-full #projects li {
+	    float: left;
+	    margin-bottom: 0;
+	    list-style: none;
+	}
+
+	/* Full Area  Columns and Hover */
+
+	.portfolio-full .list-portfolio .item-project.col-full-area {
+	    width: 100%;
+	}
+	.portfolio-full .list-portfolio .item-project .bg {
+	    height: 660px;
+	}
+
+	.portfolio-full .list-portfolio .item-project .project-name {
+	    position: absolute;
+	    top: 0;
+	    z-index: 3;
+	    display: block;
+	    float: left;
+	    padding: 20px;
+	    width: 100%;
+	    height: 100%;
+	    background: rgba(0,0,0,0.75);
+	    text-align: center;
+	    opacity: 1;
+	}
+
+	.portfolio-full .list-portfolio .item-project .project-name .va {
+	    display: table-cell;
+	    text-align: center;
+	    vertical-align: middle;
+	    position: relative;
+	    left: 0;
+	    right: 0;
+	    top: 0;
+	}
+
+	.portfolio-full .list-portfolio .item-project .project-name .va .project-title {
+	    width: 70%;
+	    text-align: left;
+	}
+
+	.portfolio-full .list-portfolio .item-project .project-name .va .project-title h3 {
+	    text-transform: uppercase;
+	    font-weight: 700;
+	    font-size: 72px;
+	    line-height: 1em;
+	}
+
+
+	.portfolio-full .list-portfolio .item-project .project-name .va .project-title h4 {
+	    margin-top: 20px;
+	}
+
+	.portfolio-full .list-portfolio .item-project .cont {
+	    position: absolute;
+	    top: 0;
+	    right: 0;
+	    z-index: 5;
+	    width: 218px;
+	    height: 100%;
+	    background: #0DCBC0;
+	    color: #FFFFFF;
+	    text-align: center;
+	    -webkit-transition: -webkit-transform 0.3s;
+	    transition: transform 0.3s;
+
+	    -webkit-transform: translateX(218px);
+	    -ms-transform: translateX(218px);
+	    transform: translateX(218px);
+	}
+
+	.portfolio-full .list-portfolio .item-project .cont:after {
+	    position: absolute;
+	    top: 0;
+	    right: 0;
+	    z-index: 4;
+	    width: 268px;
+	    height: 100%;
+	    background: #0DCBC0;
+	    content: "";
+
+	    opacity: 0.55;
+
+	    -webkit-transition: -webkit-transform 0.3s ease 0.02s;
+	    transition: transform 0.3s ease 0.02s;
+
+	    -webkit-transform: translateX(250px);
+	    -ms-transform: translateX(250px);
+	    transform: translateX(250px);
+	}
+
+	.portfolio-full .list-portfolio .item-project .cont:before {
+	    position: absolute;
+	    top: 0;
+	    right: 0;
+	    z-index: 4;
+	    width: 318px;
+	    height: 100%;
+	    background: #0DCBC0;
+	    content: "";
+
+	    opacity: 0.25;
+
+	    -webkit-transition: -webkit-transform 0.3s ease 0.02s;
+	    transition: transform 0.3s ease 0.02s;
+
+	    -webkit-transform: translateX(300px);
+	    -ms-transform: translateX(300px);
+	    transform: translateX(300px);
+	}
+
+
+	.portfolio-full .list-portfolio .item-project .cont i {
+	    position: absolute;
+	    top: 50%;
+	    left: 50%;
+	    margin: -12px 0 0 -12px;
+	    background: transparent;
+	    font-size: 24px;
+	}
+
+	.portfolio-full .list-portfolio .item-project .hover-wrap:hover .cont,
+	.portfolio-full .list-portfolio .item-project .hover-wrap:active .cont,
+	.portfolio-full .list-portfolio .item-project .hover-wrap:focus .cont,
+	.portfolio-full .list-portfolio .item-project .hover-wrap:hover .cont:after,
+	.portfolio-full .list-portfolio .item-project .hover-wrap:active .cont:after,
+	.portfolio-full .list-portfolio .item-project .hover-wrap:focus .cont:after,
+	.portfolio-full .list-portfolio .item-project .hover-wrap:hover .cont:before,
+	.portfolio-full .list-portfolio .item-project .hover-wrap:active .cont:before,
+	.portfolio-full .list-portfolio .item-project .hover-wrap:focus .cont:before {
+	    -webkit-transform: translateX(0px);
+	    -ms-transform: translateX(0px);
+	    transform: translateX(0px);
+	}
+
+	/* Portfolio Pagination */
+
+	.portfolio-pagination-wrap {
+	    margin-top: 50px;
+	}
+
+	.portfolio-pagination-wrap ul {
+	    margin: 0;
+	    padding: 0;
+	    list-style: none;
+	}
+
+	.portfolio-pagination-wrap ul li {
+	    float: left;
+	}
+
+	.portfolio-pagination-wrap ul li > a,
+	.portfolio-pagination-wrap ul li > span.current,
+	.portfolio-pagination-wrap ul li > span.expand {
+	    display: block;
+	    padding: 10px 20px;
+	    border: 2px solid #EBEDEF;
+	    background: transparent;
+	    color: #2D3C48;
+	    opacity: 1;
+	    margin-right: 5px;
+	    margin-bottom: 5px;
+
+	    -webkit-transition: border 0.3s ease 0s;
+	    transition: border 0.3s ease 0s;
+	}
+
+	/* Porfolio Pagination Full */
+	.portfolio-full .portfolio-pagination-wrap {
+	    background: #212426;
+	    padding: 50px 0;
+	    margin: 0;
+	}
+
+	.portfolio-full .portfolio-pagination-wrap ul {
+	    text-align: center;
+	}
+
+	.portfolio-full .portfolio-pagination-wrap ul li {
+	    float: none;
+	    display: inline-block;
+	}
+
+	.portfolio-full .portfolio-pagination-wrap ul li > a,
+	.portfolio-full .portfolio-pagination-wrap ul li > span.current,
+	.portfolio-full .portfolio-pagination-wrap ul li > span.expand {
+	    border-color: #FFFFFF;
+	    color: #FFFFFF;
+	}
+
+	.portfolio-pagination-wrap ul li > a:hover,
+	.portfolio-full .portfolio-pagination-wrap ul li > a:hover {
+	    border-color: #0DCBC0;
+	}
+
+	.portfolio-pagination-wrap ul li > span.current,
+	.portfolio-full .portfolio-pagination-wrap ul li > span.current {
+	    background: #0DCBC0;
+	    border-color: #0DCBC0;
+	    color: #FFFFFF;
+	}
+
+.project-link{
+	display: block;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	z-index: 3;
+}
+
+
+
+.box__thumb{
+	position: relative;
+	float: left;
+	width: 100%;
+	height: auto;
+
+	.wp-post-image {
+		width: 100%;
+		height:auto;
+		border:none;
+		display: block;
+	}
+}
+
+
+.h2{
+	margin:0 0 $margin /4;
+
+	a{
+		font-weight:100;
+	}
+}
+
+.box__body{
+	float: left;
+	width:100%;
+}
+
+
+
+
+
+@media only screen and (min-width: 768px) {
+
+	.box{
+		width:48%;
+	}
+
+	.box-container{
+		padding:2em;
+
+	}
+	.box__thumb{
+		width: 100%;
+	}
+
+
+}
+
+@media only screen and (min-width: 1030px) {
+
+
+
+}
+
+@media only screen and (min-width: 1240px) {
+
+	.box-container{
+		bottom:0;
+		padding:0 2em;
+	}
+
+
+}
+
+@media only screen and (min-width: 1800px) {
+
+
+}

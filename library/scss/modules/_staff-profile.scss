@@ -1,0 +1,46 @@
+/******************************************************************
+Site Name: Nigel Irens Design
+Author: Marco Terrinoni (MULARAM)
+
+Stylesheet: Staff Profile Module Stylesheet
+
+******************************************************************/
+
+	.box__thumb--narrow{
+		width:100% !important;
+	}
+	.box__body--wide{
+		width:100% !important;
+	}
+
+@media only screen and (min-width: 481px) {
+
+
+
+}
+
+@media only screen and (min-width: 768px) {
+	.box__thumb--narrow{
+		width:50% !important;
+	}
+	.box__body--wide{
+		width:50% !important;
+	}
+
+}
+
+@media only screen and (min-width: 1240px) {
+	.box__thumb--narrow{
+		width:33.333% !important;
+	}
+	.box__body--wide{
+		width:66.6667% !important;
+	}
+
+}
+
+@media only screen and (min-width: 1800px) {
+
+
+
+}

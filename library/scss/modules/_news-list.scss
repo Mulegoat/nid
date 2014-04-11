@@ -1,0 +1,101 @@
+/******************************************************************
+Site Name: Nigel Irens Design
+Author: Marco Terrinoni (MULARAM)
+
+Stylesheet: News List Module Stylesheet
+
+******************************************************************/
+
+.newsListBG{
+	min-height: 600px;
+	position: relative;
+	background-position: top right;
+	background-attachment: fixed;
+	background-size: 100%;
+	width: 100%;
+	padding: 0px;
+	padding-top: 10%;
+	padding-bottom: 10%;
+}
+.newsList__header__link{
+	color:black !important;
+}
+.newsList__excerpt{
+	margin-top:0;
+}
+
+.newsList__body{
+	width:33.333%;
+
+	.newsList__content{
+		font-size:100%;
+	}
+}
+
+
+.newsList{
+	width:98%;
+	float: left;
+	height: auto;
+	position: relative;
+	border-bottom:2px solid $light-grey;
+}
+
+
+
+.newsList__thumb{
+	position: relative;
+	float: left;
+	width: 100%;
+	height: auto;
+}
+
+.newsList__copy{
+	float: right;
+	width: 50%;
+	padding:0.5em;
+}
+.newsList__excerpt{
+	margin:0;
+}
+
+.h2{
+	margin:0 0 $margin /4;
+
+	a{
+		font-weight:100;
+	}
+}
+
+.newsList__body{
+	float: left;
+	width:100%;
+}
+
+.newsList__footer{
+	width:100%;
+	float:left;
+	margin:$margin/2 0;
+}
+
+
+
+@media only screen and (min-width: 768px) {
+
+
+
+}
+
+@media only screen and (min-width: 1030px) {
+
+
+
+}
+
+@media only screen and (min-width: 1240px) {
+
+}
+
+@media only screen and (min-width: 1800px) {
+
+}

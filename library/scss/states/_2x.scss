@@ -1,0 +1,90 @@
+/******************************************************************
+Site Name: Nigel Irens Design
+Author: Marco Terrinoni (MULARAM)
+
+Stylesheet: Retina Screens & Devices Stylesheet
+
+When handling retina screens you need to make adjustments, especially
+if you're not using font icons. Here you can add them in one neat
+place.
+
+******************************************************************/
+
+/*
+
+EXAMPLE
+Let's say you have an image and you need to make sure it looks ok
+on retina screens. Let's say we have an icon which dimension are
+24px x 24px. In your regular stylesheets, it would look something
+like this:
+
+.icon {
+	width: 24px;
+	height: 24px;
+	background: url(img/test.png) no-repeat;
+}
+
+For retina screens, we have to make some adjustments, so that image
+doesn't look blurry. So, taking into account the image above and the
+dimensions, this is what we would put in our retina stylesheet:
+
+.icon {
+	background: url(img/test@2x.png) no-repeat;
+	background-size: 24px 24px;
+}
+
+So, you would create the same icon, but at double the resolution, meaning
+it would be 48px x 48px. You'd name it the same, but with a @2x at the end
+(this is pretty standard practice). Set the background image so it matches
+the original dimensions and you are good to go.
+
+*/
+.header__logo{
+	width:80px;
+	height: 80px;
+	display: block;
+	margin:0;
+	float: none;
+
+
+	a{
+		width:80px;
+		height:80px;
+		display: block;
+		background:url('../images/x2/logo_320up.svg') no-repeat;
+		float: none;
+		margin:0 auto;
+		padding:$padding;
+	}
+}
+
+
+@media only screen and (min-width: 768px) {
+	.header__logo{
+		width:112px;
+		height: 100px;
+		margin:0;
+		float: none;
+
+		a{
+			width:112px;
+			height:100px;
+			background:url('../images/x2/logo_768up.svg') no-repeat;
+		}
+	}
+}
+
+
+@media only screen and (min-width: 1240px) {
+
+	.header__logo{
+		width:170px;
+		height:150px;
+		a{
+			width:170px;
+			height:150px;
+			background:url('../images/x2/logo.svg') no-repeat;
+			float: left;
+		}
+	}
+}

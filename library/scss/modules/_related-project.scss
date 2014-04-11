@@ -1,0 +1,27 @@
+/******************************************************************
+Site Name: Nigel Irens Design
+Author: Marco Terrinoni (MULARAM)
+
+
+Stylesheet: Related Project Module Stylesheet
+
+******************************************************************/
+.relatedItems{
+	position: relative;
+}
+
+
+@media only screen and (min-width: 1030px) {
+
+
+}
+
+@media only screen and (min-width: 1240px) {
+
+	.relatedItems{
+		position: absolute;
+		top:0;
+		right:-50%;
+	}
+
+}

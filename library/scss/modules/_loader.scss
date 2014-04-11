@@ -1,0 +1,34 @@
+/******************************************************************
+Site Name: Nigel Irens Design
+Author: Marco Terrinoni (MULARAM)
+
+Stylesheet: Loader Module Stylesheet
+
+******************************************************************/
+@media only screen and (min-width: 320px) {
+
+
+
+}
+
+@media only screen and (min-width: 481px) {
+
+
+}
+
+@media only screen and (min-width: 768px) {
+
+	#infscr-loading {
+	  text-align: center;
+	  z-index: 100;
+	  position: fixed;
+	  left: 45%;
+	  bottom: 100px;
+	  width: 200px;
+	  padding: 10px;
+	  background: #000;
+	  opacity: 0.8;
+	  color: #FFF;
+	  }
+
+}

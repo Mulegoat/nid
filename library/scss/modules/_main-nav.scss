@@ -1,0 +1,222 @@
+/******************************************************************
+Site Name: Nigel Irens Design
+Author: Marco Terrinoni (MULARAM)
+
+Stylesheet: Main Nav Module Stylesheet
+
+******************************************************************/
+
+.top-nav{
+	float: left;
+}
+
+.menu-trigger{
+	//display: none;
+	display: block;
+	width:40px;
+	height: 40px;
+	line-height: 40px;
+	text-align: center;
+	float: left;
+	margin:20px 15px;
+
+	a{
+		color:white;
+		background: $red;
+		font-size:20px;
+		display: block;
+		width: 40px;
+		height: 40px;
+		line-height:40px;
+		@include border-radius(5px 5px 5px 5px);
+
+
+		&:hover,&:focus{
+			background:darken($red, 10%);
+		}
+	}
+}
+.menu-trigger__label{
+	display: none;
+}
+
+
+
+.main-menu{
+	display: none;
+	border-right:5px darken($link-color, 10%) solid;
+}
+
+	.menu-item{
+		width:100%;
+		a{
+			color: white;
+			font-weight:700;
+			text-transform:uppercase;
+			letter-spacing: 2.2px;
+			font-size:85%;
+			width:100%;
+			background:$link-color;
+
+			&:hover,&:focus{
+				background:darken($link-color, 10%);
+			}
+			&:active{
+				color:$link-color;
+				background: white;
+			}
+		}
+	}
+
+.mm-menu{
+	background:white;
+}
+.mm-menu.mm-front {
+	box-shadow: 0 0 0px rgba(0,0,0,0);
+}
+
+
+
+.mm-list{
+	margin:0;
+
+	li{
+		width:100%;
+		overflow: hidden;
+		border-bottom:1px solid darken($link-color, 10%);
+
+		a.mm-subopen{
+			background: white;
+			color: $link-color;
+			height: 42px !important;
+		}
+
+		a.mm-subopen::before{
+			content: '';
+			border-left-width: 0px;
+		}
+
+		a.mm-subopen:after {
+			//border-color: rgba(255, 255, 255, 0);
+		}
+
+		a.mm-subopen+a{
+			// color: white;
+			//font-size:120%;
+		}
+		a.mm-subclose:before {
+			border-color: rgba(255, 255, 255, 1) !important;
+		}
+		a{
+			color: $white;
+			line-height: 2;
+
+			span{
+				padding-right: $padding *2;
+			}
+			&:hover, &:hover{
+				background:darken($link-color, 10%);
+				color: white;
+				@include transition(background-color 0.14s ease-in-out);
+			}
+			&:active{
+				background:darken($link-color, 10%);
+				color: white;
+			}
+		}
+	}
+	li.mm-selected{
+		a{
+			color:$black !important;
+		}
+
+	}
+
+}
+
+.mm-menu > .mm-panel {
+	top: 60px;
+	padding: 0;
+}
+.mm-menu .mm-list>li:after {
+	border-color: rgba(0,0,0,0);
+	border-bottom-width:0px !important;
+}
+
+@media only screen and (min-width: 768px) {
+
+	.menu-trigger{
+		width:50px;
+		height: 50px;
+		line-height: 50px;
+		margin:25px;
+
+		a{
+			font-size:25px;
+			width: 50px;
+			height: 50px;
+			line-height:50px;
+		}
+	}
+
+}
+.mm-menu > .mm-panel {
+	top: 100px;
+}
+
+
+@media only screen and (min-width: 1240px) {
+
+	.mm-menu > .mm-panel {
+		top: 200px;
+	}
+
+	.mm-menu{
+		z-index:1 !important;
+	}
+
+	.mm-list {
+		font-size:80%;
+	}
+	.top-nav{
+		width: 100%;
+	}
+
+	.menu-trigger{
+		position: relative;
+		top:200px;
+		margin:0 auto;
+		float: none;
+
+		a{
+
+			&:hover,&:focus{
+				background:$link-hover;
+				color: white;
+				@include transition(background-color 0.14s ease-in-out);
+			}
+		}
+	}
+	.menu-trigger__label{
+		display: block;
+		background: none;
+		color: $light-grey;
+		text-align: center;
+		position: relative;
+		top: 210px;
+		width: 100%;
+		font-size: 80%;
+		letter-spacing: 2px;
+		text-transform: lowercase;
+	}
+
+
+}
+@media only screen and (min-width: 1800px) {
+	.menu-trigger{
+		top:250px;
+	}
+	.menu-trigger__label{
+		top:260px;
+	}
+}

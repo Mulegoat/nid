@@ -1,0 +1,87 @@
+/******************************************************************
+Site Name: Nigel Irens Design
+Author: Marco Terrinoni (MULARAM)
+
+Stylesheet: Map Module Stylesheet
+
+******************************************************************/
+
+.leaflet-popup-content-wrapper {
+	@include border-radius(0px 0px 0 0 !important);
+}
+.leaflet-container a {
+	color: $light-grey !important;
+	border: none;
+}
+
+.leaflet-top, .leaflet-bottom {
+	z-index: 99;
+}
+.leaflet-control-zoom {
+}
+
+.leaflet-control-zoom a {
+	border-radius: 0px;
+}
+
+.address-container{
+	float: left;
+	padding-left:2em;
+	margin:$margin 0;
+	width:100%;
+	height: auto;
+}
+
+.company-info{
+	margin:0 !important;
+	padding:0;
+}
+
+.company-info__item{
+	float: left;
+	width: 90%;
+	list-style: none;
+	margin:$margin $margin/4;
+	color: black;
+
+
+	a{
+		color: black;
+		&:hover, &:focus{
+			color:$link-color;
+			text-decoration: underline;
+		}
+	}
+
+}
+.company-info__item--address{
+	float: left;
+	margin-left:1.5em;
+	color:$grey;
+	display: block;
+	width: 100%;
+	font-weight: 100;
+}
+.company-info__icon{
+	float: left;
+	margin-right: $margin/4;
+	color: $link-color;
+}
+
+
+@media only screen and (min-width: 1240px) {
+
+
+	.address-container{
+
+
+	}
+
+	.company-info__item{
+
+		margin:$margin $margin/4;
+		font-size:80%;
+
+	}
+
+}

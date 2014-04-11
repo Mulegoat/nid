@@ -1,0 +1,159 @@
+/*
+ * CSS Styles that are needed by jScrollPane for it to operate correctly.
+ *
+ * Include this stylesheet in your site or copy and paste the styles below into your stylesheet - jScrollPane
+ * may not operate correctly without them.
+ */
+
+.jspContainer
+{
+	overflow: hidden;
+	position: relative;
+	height: 100%;
+}
+
+.scroll-pane{
+	width: 100%;
+	height: auto;
+	//height:100%;
+	position: static;
+}
+
+.jspPane
+{
+	position: absolute;
+}
+
+.jspVerticalBar
+{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 30px;
+	height: 100%;
+	background: #ddd;
+
+	.jspArrow{
+		width:30px;
+		height: 30px;
+		display: block;
+		font-size: 16px;
+		line-height: 30px;
+		color:$grey !important;
+	}
+
+	.jspArrowUp:before{
+		content: "\e60a";
+	}
+	.jspArrowDown:before{
+		content: "\e606";
+	}
+}
+
+.jspHorizontalBar
+{
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 16px;
+	background: red;
+}
+
+.jspCap
+{
+	display: none;
+}
+
+.jspHorizontalBar .jspCap
+{
+	float: left;
+}
+
+.jspTrack
+{
+	background:$light-grey;
+	position: relative;
+}
+
+.jspDrag
+{
+	background:#cdcdcd;
+	position: relative;
+	top: 0;
+	left: 0;
+	cursor: pointer;
+}
+.jspActive{
+	background:$grey;
+}
+
+.jspHorizontalBar .jspTrack,
+.jspHorizontalBar .jspDrag
+{
+	float: left;
+	height: 100%;
+}
+
+.jspArrow
+{
+	background: $light-grey;
+	display: block;
+	cursor: pointer;
+	padding: 0;
+	margin: 0;
+	font-family: 'icomoon';
+	content: attr(data-icon);
+	speak: none;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	text-align: center;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+
+}
+
+.jspArrow.jspDisabled
+{
+	cursor: default;
+	background:$light-grey;
+}
+
+.jspHorizontalBar .jspArrow
+{
+	width: 30px;
+	float: left;
+	height: 100%;
+}
+
+.jspVerticalBar .jspArrow:focus
+{
+	outline: none;
+}
+
+.jspCorner
+{
+	background: #eeeef4;
+	float: left;
+	height: 100%;
+}
+
+/* Yuk! CSS Hack for IE6 3 pixel bug :( */
+* html .jspCorner
+{
+	margin: 0 -3px 0 0;
+}
+
+@media only screen and (min-width: 1240px) {
+
+	.scroll-pane{
+		width: 100%;
+		//height: auto;
+		height: 100%;
+		//height:100%;
+		overflow:auto;
+		position: absolute;
+	}
+
+}
