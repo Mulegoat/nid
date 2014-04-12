@@ -22,6 +22,7 @@ Stylesheet: Project List Module Stylesheet
 	.item-project {
 	    position: relative;
 	    overflow: hidden;
+	    margin-bottom: 1em;
 	}
 
 	.item-project .hover-wrap {
@@ -447,8 +448,10 @@ Stylesheet: Project List Module Stylesheet
 	width:100%;
 }
 
+.box-container{
+	padding:1em;
 
-
+}
 
 
 @media only screen and (min-width: 768px) {
@@ -475,6 +478,10 @@ Stylesheet: Project List Module Stylesheet
 }
 
 @media only screen and (min-width: 1240px) {
+
+	.item-project{
+		margin-bottom:0;
+	}
 
 	.box-container{
 		bottom:0;

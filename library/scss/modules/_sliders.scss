@@ -179,10 +179,10 @@ SLIDER HEADERS
 		background-color: rgba(0,0,0,0.9);
 	}
 	.myCustomSkin.rsHor .rsArrowLeft .rsArrowIcn:before {
-		content: "\e601";
+		content: "\e3bf";
 	 }
 	.myCustomSkin.rsHor .rsArrowRight .rsArrowIcn:before {
-		content: "\e600";
+		content: "\e3bb";
 	 }
 
 	.myCustomSkin.rsVer .rsArrowLeft .rsArrowIcn:before {
@@ -360,7 +360,6 @@ NEARBY SLIDES
 
 	.heroHeader{
 		top:200px;
-
 	}
 
 	.slider{
@@ -392,6 +391,7 @@ NEARBY SLIDES
 		background: $link-color;
 		&:hover,&:focus{
 			background:$link-hover;
+			@include transition(all 0.2s ease-in-out);
 		}
 	}
 
