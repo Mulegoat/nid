@@ -36,8 +36,8 @@ http://www.youtube.com/watch?v=hwdVpKiJzac
   color: white !important;
   font-size: 0.66em;
   font-weight: 700;
-  padding:6px 25px;
-  line-height: 40px;
+  padding:10px;
+  line-height: 12px;
   border: 0;
   cursor: pointer;
   margin:1em 0;
@@ -57,22 +57,39 @@ http://www.youtube.com/watch?v=hwdVpKiJzac
 
 } // end .button
 
-.button--theme1{
+.button{
   @extend %button;
-  background: none;
-  border: 1px solid white;
-  &:hover,&:focus{
-    border-color:$link-color;
-  }
-}
-.button--theme3{
-  @extend %button;
-  background: none;
-  color: $link-color !important;
-  border: 1px solid $link-color;
-  &:hover,&:focus{
-    border-color:white;
-    color: white !important;
-  }
 }
 
+.button--theme1{
+    @extend %button;
+    background: none;
+    border: 1px solid white;
+    &:hover,&:focus{
+      border-color:$link-color;
+    }
+}
+.button--theme3{
+    @extend %button;
+    background: none;
+    color: $link-color !important;
+    border: 1px solid $link-color;
+    &:hover,&:focus{
+      border-color:white;
+      color: white !important;
+    }
+}
+.button__label{
+  display: none;
+}
+@media only screen and (min-width: 768px) {
+
+  .button__label{
+    display: inline;
+  }
+  %button{
+      padding:6px 25px;
+      line-height: 40px;
+  }
+
+}

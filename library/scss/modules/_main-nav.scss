@@ -135,7 +135,7 @@ Stylesheet: Main Nav Module Stylesheet
 }
 
 .mm-menu > .mm-panel {
-	top: 60px;
+	top: 80px;
 	padding: 0;
 }
 .mm-menu .mm-list>li:after {
@@ -144,6 +144,10 @@ Stylesheet: Main Nav Module Stylesheet
 }
 
 @media only screen and (min-width: 768px) {
+
+	.mm-menu > .mm-panel {
+		top: 100px;
+	}
 
 	.menu-trigger{
 		width:50px;
@@ -160,9 +164,7 @@ Stylesheet: Main Nav Module Stylesheet
 	}
 
 }
-.mm-menu > .mm-panel {
-	top: 100px;
-}
+
 
 
 @media only screen and (min-width: 1240px) {
@@ -206,8 +208,10 @@ Stylesheet: Main Nav Module Stylesheet
 		top: 210px;
 		width: 100%;
 		font-size: 80%;
-		letter-spacing: 2px;
-		text-transform: lowercase;
+		text-transform: uppercase;
+		letter-spacing: 2.5px;
+		font-size: 0.66em;
+		font-weight: 700;
 	}
 
 

@@ -9,17 +9,38 @@ Stylesheet: Footer Module Stylesheet
 	.footer {
 		position: relative;
 		bottom:0;
+
+		.inner-page{
+			margin-top: 0;
+		}
 	}
 	.inner-footer{
 		padding:$padding /2;
 	}
 
-	.footer-links{
-		width: 50%;
+	.footer-menu{
+		width: 100%;
 		padding:$padding;
 		float: left;
-	}
+		text-align: center;
 
+		.footer-menu__header{
+			text-transform: uppercase;
+			letter-spacing: 1px;
+			font-weight: 500;
+		}
+
+		.menu-item a{
+			font-weight: 100;
+			text-transform: lowercase;
+
+			&:hover,&:focus{
+				background:none;
+				color: white;
+				text-decoration: underline;
+			}
+		}
+	}
 
 	/*
 	if you checked out the link above:
@@ -65,9 +86,9 @@ Stylesheet: Footer Module Stylesheet
 	}
 
 
-	.footer-links {
-		width:25%;
-		font-weight: 100;
+	.footer-menu {
+		width:33.3333%;
+		float: left;
 	}
 
 
@@ -77,10 +98,8 @@ Stylesheet: Footer Module Stylesheet
 	.footer{
 		position: relative;
 		bottom: 0;
+		z-index: 3;
 	}
-	.copyright{
-		padding-left: 170px;
-		//text-align: right;
-	}
+
 
 }

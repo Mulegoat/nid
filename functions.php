@@ -230,6 +230,33 @@ and be up and running in seconds.
 //}
 
 //add_action('wp_print_styles', 'bones_fonts');
+/**
+ * Register the scripts with WordPress
+ */
+// function register_ajax_scripts() {
+//   wp_register_script( 'script-handle', get_stylesheet_directory_uri() . 'js/min/scripts.min.js', array( 'jquery' ), '', true);
+//   wp_enqueue_script( 'script-handle' );
+
+//   /*
+//   This is used to pass the URL of WordPress' AJAX stuff to the script. You can add more values to the array to pass more information.
+//   */
+//   wp_localize_script( 'script-handle', 'ObjectName', array( 'ajaxurl' => admin_url( 'admin-ajax.php' ), 'parameter' => $whatever_you_want_to_pass ) );
+// }
+
+// add_action( 'enqueue_scripts', 'register_scripts' );
+
+// /**
+//  * This is the PHP function that is triggered from the JavaScript.
+//  */
+// function ajax_callback() {
+//   // Do a bunch of fancy stuff.
+
+//   die(); // This is required for a proper response.
+// }
+
+// add_action( 'wp_ajax_script_handle', 'callback' ); // Hook for the WordPress Dashboard.
+// add_action( 'wp_ajax_script_handle_nopriv', 'callback' ); // Hook for the user facing side of the site.
+
 
 /**
  * Add Function to return Page Parent slug
@@ -276,9 +303,56 @@ function new_royalslider_add_custom_skin($skins) {
        'after_title' => '</h3>'
 ) );
 ?>
+<?php register_sidebar( array(
+        'id' => 'footer-links',
+        'name' => 'Footer Links',
+       'before_widget' => '<nav class="footer-menu">',
+       'after_widget' => '</nav>',
+       'before_title' => '<h3 class="footer-menu__header">',
+       'after_title' => '</h3>'
+) );
+?>
 <?php
 /**
 *Init Royal Slider
 **/
 register_new_royalslider_files(1);
+?>
+<?php
+
+/*
+*  Create a simple sub options page called 'Home Page'
+*/
+
+if( function_exists('acf_add_options_sub_page') )
+{
+    acf_add_options_sub_page( 'Home Sections' );
+}
+
+/*
+*  Create an advanced sub page called 'Home Page' that sits under the General options menu
+*/
+
+if( function_exists('acf_add_options_sub_page') )
+{
+    acf_add_options_sub_page(array(
+        'title' => 'Home Sections',
+        'parent' => 'options-general.php',
+        'capability' => 'manage_options'
+    ));
+}
+?>
+<?php
+
+/*
+*  Change the Options Page menu to 'Home Sections'
+*/
+
+if( function_exists('acf_set_options_page_title') )
+{
+    acf_set_options_page_title( __('Home Page') );
+}
+?>
+<?php
+  remove_action('wp_head', 'wp_generator');
 ?>

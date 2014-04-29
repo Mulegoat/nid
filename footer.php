@@ -1,7 +1,7 @@
 
 			<footer class="m-all t-all d-all footer box--theme4 cf" role="contentinfo">
 
-				<div id="inner-footer">
+				<div id="inner-footer" class="inner-page">
 
 					<nav role="navigation">
 						<?php wp_nav_menu(array(
@@ -19,11 +19,17 @@
 						)); ?>
 					</nav>
 
+					<div class="m-all t-all d-all grid-float">
+						<?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar('footer-links') ) : ?> <?php endif; ?>
+					</div>
+
 					<p class="source-org copyright">&copy; <?php echo date('Y'); ?> <?php bloginfo( 'name' ); ?>.</p>
 
 					<div class="connect">
 						<?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar('connect-links') ) : ?> <?php endif; ?>
 					</div>
+
+
 
 				</div> <?php // end #inner-footer ?>
 

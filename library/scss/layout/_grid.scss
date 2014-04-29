@@ -79,6 +79,10 @@ over your project's layout.
 .d-1of12{
   float: left;
 }
+.grid-float{
+  position:relative;
+  float:left !important;
+}
 
 .last-col {
   float: right;
@@ -89,7 +93,13 @@ over your project's layout.
   margin:0 auto;
 }
 .inner-page{
-  margin-top:60px;
+  margin-top:80px;
+}
+
+.block{
+  width:auto;
+  position: relative;
+  overflow: hidden;
 }
 
 /*

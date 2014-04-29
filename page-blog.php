@@ -1,6 +1,6 @@
 <?php
 /*
- Template Name: News Page
+ Template Name: Blog Page
 */
 ?>
 <?php get_header(); ?>

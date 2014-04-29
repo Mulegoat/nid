@@ -16,12 +16,20 @@ Stylesheet: Share Content Module Stylesheet
 		border-bottom: none;
 	}
 }
-#ssba{
+.ssba{
 	font-family: 'icomoon' !important;
 	padding:0 !important;
+	font-size:20px !important;
+
+	img{
+		display: none !important;
+	}
+	img.ssba{
+		display: none !important;
+	}
 }
 
-#ssba a{
+.ssba a{
 	font-family: 'icomoon' !important;
 	speak: none;
 	font-style: normal;
@@ -31,13 +39,12 @@ Stylesheet: Share Content Module Stylesheet
 	/* Better Font Rendering =========== */
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
-
-	width:26px !important;
-	height: 26px !important;
+	font-size:16px !important;
+	width:32px !important;
+	height: 32px !important;
 	background:$light-grey !important;
 	color: $grey !important;
-	font-size: 13px !important;
-	line-height:26px;
+	line-height:32px;
 	padding:0px !important;
 	margin-left:6px;
 	float: right;
@@ -48,26 +55,24 @@ Stylesheet: Share Content Module Stylesheet
 		background: $light-grey !important;
 	}
 
-	img{
-		display: none;
-	}
+
 }
-#ssba_email_share:before{
+.ssba_email_share:before{
 	content: "\e0ec";
 }
-#ssba_facebook_share:before{
+.ssba_facebook_share:before{
 	content: "\e609";
 }
-#ssba_twitter_share:before{
+.ssba_twitter_share:before{
 	content: "\e604";
 }
-#ssba_pinterest_share:before{
+.ssba_pinterest_share:before{
 	content: "\e608";
 }
-#ssba_google_share:before{
+.ssba_google_share:before{
 	content: "\e607";
 }
-#ssba_linkedin_share:before{
+.ssba_linkedin_share:before{
 	content: "\e605";
 }
 

@@ -42,7 +42,7 @@
 								$args=array(
 								  'cat' =>1,
 								  'posts_per_page' => 1,
-								  'post_status' => 'publish',
+								  'post_status' => 'published',
 								  'post__not_in' => array($this_post),
 								  'order' => 'DESC',
 								  'caller_get_posts'=> 1

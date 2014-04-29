@@ -1,0 +1,46 @@
+/******************************************************************
+Site Name: Nigel Irens Design
+Author: Marco Terrinoni (MULARAM)
+
+
+Stylesheet: Home Page Scroll Button Module Stylesheet
+
+******************************************************************/
+
+
+.scrollButtons{
+	display: none;
+}
+
+@media only screen and (min-width: 768px) {
+
+	.scrollButtons{
+		display: block;
+		width:50px;
+		margin:100px 0 0 0;
+		position: fixed;
+		right:0;
+		overflow: visible;
+		z-index: 3;
+	}
+	.button__scroll{
+
+	}
+
+}
+
+@media only screen and (min-width: 1240px) {
+
+	.scrollButtons{
+		width:100px;
+		margin:0 0 100px 0;
+		right:42.5%;
+		bottom:0 !important;
+
+		a{
+			float: left;
+		}
+	}
+}
+
+

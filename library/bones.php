@@ -131,37 +131,37 @@ function bones_scripts_and_styles() {
     wp_register_script( 'bones-modernizr', get_stylesheet_directory_uri() . '/library/js/libs/modernizr.custom.min.js', array(), '2.5.3', false );
 
     // Enquire.js
-    wp_register_script( 'enquire', get_stylesheet_directory_uri() . '/library/js/libs/enquire.min.js', array(), '2.5.3', false );
+    wp_register_script( 'enquire', get_stylesheet_directory_uri() . '/library/js/libs/enquire.min.js', array(), '2.1.0', false );
 
     // jquery mobile menu
-    wp_register_script( 'jquery-mm', get_stylesheet_directory_uri() . '/library/js/libs/jquery.mmenu.min.js', array('jquery'), '2.5.3', false );
+    wp_register_script( 'jquery-mm', get_stylesheet_directory_uri() . '/library/js/libs/jquery.mmenu.min.js', array('jquery'), '4.1.6', false );
 
     // TweenMax
-    wp_register_script( 'gsap-tweenmax', ("http://cdnjs.cloudflare.com/ajax/libs/gsap/1.11.5/TweenMax.min.js"), false, 'latest', false);
+    wp_register_script( 'gsap-tweenmax', ("http://cdnjs.cloudflare.com/ajax/libs/gsap/1.11.6/TweenMax.min.js"), false, '1.11.6', false);
 
     // TweenMax scrollToPlugin
-    wp_register_script( 'gsap-scrollto', ("http://cdnjs.cloudflare.com/ajax/libs/gsap/1.11.5/plugins/ScrollToPlugin.min.js"), false, 'latest', false);
+    wp_register_script( 'gsap-scrollto', ("http://cdnjs.cloudflare.com/ajax/libs/gsap/1.11.6/plugins/ScrollToPlugin.min.js"), false, '1.11.6', false);
 
     // TweenMax JQuery
-    wp_register_script( 'gsap-jquery', ("http://cdnjs.cloudflare.com/ajax/libs/gsap/1.11.5/jquery.gsap.min.js"), false, 'latest', false);
+    wp_register_script( 'gsap-jquery', ("http://cdnjs.cloudflare.com/ajax/libs/gsap/1.11.6/jquery.gsap.min.js"), false, '1.11.6', false);
 
     // jquery easing
-    wp_register_script( 'jquery-easing', get_stylesheet_directory_uri() . '/library/js/libs/jquery.easing.1.3.min.js', array('jquery'), '2.5.3', false );
+    wp_register_script( 'jquery-easing', get_stylesheet_directory_uri() . '/library/js/libs/jquery.easing.1.3.min.js', array('jquery'), '1.3.0', false );
 
     // jquery load images
-    wp_register_script( 'jquery-loadImages', get_stylesheet_directory_uri() . '/library/js/libs/jquery.loadimages.min.js', array('jquery'), '2.5.3', false );
+    wp_register_script( 'jquery-loadImages', get_stylesheet_directory_uri() . '/library/js/libs/jquery.loadimages.min.js', array('jquery'), 'latest', false );
 
     // jquery scrollpane
-    wp_register_script( 'jquery-scrollpane', get_stylesheet_directory_uri() . '/library/js/libs/jquery.scrollpane.min.js', array('jquery'), '2.5.3', false );
+    wp_register_script( 'jquery-scrollpane', get_stylesheet_directory_uri() . '/library/js/libs/jquery.scrollpane.min.js', array('jquery'), 'latest', false );
 
     // jquery mousewheel
-    wp_register_script( 'jquery-mousewheel', get_stylesheet_directory_uri() . '/library/js/libs/jquery.mousewheel.min.js', array('jquery'), '2.5.3', false );
+    wp_register_script( 'jquery-mousewheel', get_stylesheet_directory_uri() . '/library/js/libs/jquery.mousewheel.min.js', array('jquery'), '3.1.9', false );
 
     // jquery isotope
-    wp_register_script( 'jquery-isotope', get_stylesheet_directory_uri() . '/library/js/libs/jquery.isotope.min.js', array('jquery'), '2.5.3', false );
+    wp_register_script( 'jquery-isotope', get_stylesheet_directory_uri() . '/library/js/libs/jquery.isotope.min.js', array('jquery'), '1.5.25', false );
 
     // jquery fitvids
-    wp_register_script( 'fluidvids', get_stylesheet_directory_uri() . '/library/js/libs/fluidvids.min.js', array(), '2.5.3', false );
+    wp_register_script( 'fluidvids', get_stylesheet_directory_uri() . '/library/js/libs/fluidvids.min.js', array(), '2.2.0', false );
 
     // register main stylesheet
     wp_register_style( 'bones-stylesheet', get_stylesheet_directory_uri() . '/library/css/style.css', array(), '', 'all' );
@@ -175,7 +175,7 @@ function bones_scripts_and_styles() {
     }
 
     //adding scripts file in the footer
-    wp_register_script( 'bones-js', get_stylesheet_directory_uri() . '/library/js/min/scripts.min.js', array( 'jquery' ), '', true );
+    wp_register_script( 'bones-js', get_stylesheet_directory_uri() . '/library/js/min/scripts.min.js', array( 'jquery' ), '1.0.0', true );
 
     // enqueue styles and scripts
     wp_enqueue_script( 'bones-modernizr' );

@@ -145,6 +145,11 @@ the other stylesheets. Remember, keep it light: Speed is Important.
 // import connect links
 @import "modules/connect-links";
 
+// import scroll-buttons
+@import "modules/scroll-buttons";
+
+
+
 /*
 LARGER MOBILE DEVICES
 This is for devices like the Galaxy Note or something that's
@@ -171,6 +176,9 @@ you can add resource intensive styles.
 
 	// styles in 768up.scss
 	@import "states/768up";
+
+	// import scroll-nav
+	@import "modules/scroll-nav";
 
 } // end of media query
 
@@ -199,9 +207,6 @@ This is for the larger monitors and possibly full screen viewers.
 
 	// styles in 1240up.scss
 	@import "states/1240up";
-
-	// import scroll-nav
-	@import "modules/scroll-nav";
 
 } // end of media query
 

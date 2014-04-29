@@ -34,9 +34,8 @@ Stylesheet: Page Header Module Stylesheet
 	margin:0.5em 0 0.25em 0;
 }
 .slide-title{
-	line-height:1.25em;
 	font-size: 1.75em;
-	margin:0.25em 0;
+	margin-top:0.25em;
 }
 
 
@@ -47,6 +46,7 @@ Stylesheet: Page Header Module Stylesheet
 @media only screen and (min-width: 768px) {
 
 	.slide-title{
+		margin-top: 0;
 		font-size: 3.5em;
 	}
 

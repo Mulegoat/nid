@@ -59,18 +59,30 @@ SLIDER HEADERS
 	position: absolute;
 	z-index: 10;
 	left: 0;
-	top:15%;
+	top:0;
     display: block;
     padding:0 2em;
     opacity: 1;
 
-
     .project-excerpt{
     	text-transform: capitalize;
     }
+    width: 100%;
 
 }
 
+
+
+.slide-excerpt{
+	display: none;
+}
+
+.myCustomSkin .rsContent{
+	overflow: visible;
+}
+.myCustomSkin .rsSlide{
+	overflow: visible;
+}
 
 /***************
 *
@@ -86,8 +98,6 @@ SLIDER HEADERS
 		position: absolute;
 		width:auto;
 		max-width: 50%;
-		//background: $red;
-
 		background-image: -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(0%, #2a2424), color-stop(100%, $transparent));
 		background-image: -webkit-linear-gradient(left, #2a2424, $transparent);
 		background-image: -moz-linear-gradient(left, #2a2424, $transparent);
@@ -101,6 +111,10 @@ SLIDER HEADERS
 		background-image: -o-linear-gradient(left top, #2a2424, $transparent);
 		background-image: linear-gradient(left top, #2a2424, $transparent);
 
+
+	}
+	.slide-excerpt{
+		display: block;
 	}
 
 	.mobile-only-content{
@@ -156,15 +170,22 @@ SLIDER HEADERS
 		height: 32px;
 		top: 50%;
 		//left: 50%;
-		margin-top:-16px;
-		margin-left: -16px;
-		font-size:24px;
-		line-height:32px;
 		position: absolute;
 		cursor: pointer;
-		background-color: #000;
-		background-color: rgba(0,0,0,0.75);
-		*background-color: #000;
+		width: 50px;
+		height: 50px;
+		//left: 50%;
+		margin-top:-25px;
+		margin-left:0;
+		font-size:25px;
+		line-height:50px;
+		background: $link-color;
+		&:hover,&:focus{
+			background:$link-hover;
+			@include transition(all 0.2s ease-in-out);
+		}
+
+
 	}
 
 
@@ -174,10 +195,36 @@ SLIDER HEADERS
 	}
 
 
-
-	.myCustomSkin .rsArrowIcn:hover {
-		background-color: rgba(0,0,0,0.9);
+	.myCustomSkin .rsArrow {
+		height: 50px;
+		width: 50px;
+		position: absolute;
+		display: block;
+		cursor: pointer;
+		// z-index: 21;
 	}
+	.myCustomSkin.rsVer .rsArrow {
+		width: 100%;
+		height: 50px;
+	}
+
+
+	.myCustomSkin.rsHor .rsArrowRight {
+		right: 0;
+		top:230px;
+	}
+
+	.myCustomSkin.rsHor .rsArrowLeft {
+		left:100%;
+		top:280px;
+		margin-left:-50px;
+	}
+
+
+
+
+
+
 	.myCustomSkin.rsHor .rsArrowLeft .rsArrowIcn:before {
 		content: "\e3bf";
 	 }
@@ -282,13 +329,13 @@ SLIDER HEADERS
 ****************/
 
 .myCustomSkin .rsPreloader {
-	width:64px;
-	height:64px;
+	width:50px;
+	height:50px;
 	background-image:url(../images/preloader.GIF);
 	left:50%;
 	top:40%;
-	margin-left:-32px;
-	margin-top:-32px;
+	margin-left:-25px;
+	margin-top:-25px;
 }
 
 
@@ -367,161 +414,124 @@ NEARBY SLIDES
 		position: relative;
 	}
 
-	.myCustomSkin .rsArrow {
-		height: 50px;
-		width: 50px;
-		position: absolute;
-		display: block;
-		cursor: pointer;
-		// z-index: 21;
-	}
-	.myCustomSkin.rsVer .rsArrow {
-		width: 100%;
-		height: 50px;
-	}
-
-	.myCustomSkin .rsArrowIcn {
-		width: 50px;
-		height: 50px;
-		//left: 50%;
-		margin-top:-25px;
-		margin-left:0;
-		font-size:25px;
-		line-height:50px;
-		background: $link-color;
-		&:hover,&:focus{
-			background:$link-hover;
-			@include transition(all 0.2s ease-in-out);
-		}
-	}
-
-	.myCustomSkin.rsHor .rsArrowRight {
-		right: 0;
-		top:230px;
-	}
-
-	.myCustomSkin.rsHor .rsArrowLeft {
-		left:100%;
-		top:280px;
-		margin-left:-50px;
-	}
-
-	.rsBullets {
-		position: absolute;
-		z-index: 3;
-		top:225px;
-		right:0%;
-		padding: 4px;
-		width: 50px;
-		height:auto;
-		margin: 20px auto;
-		background: $red;
-		float: left;
-		text-align: center;
-		display: inline-block;
-		//display: none;
-		margin: 0;
-		padding: 0;
-		list-style: none;
-		cursor: default;
-		-webkit-touch-callout: none;
-		-webkit-user-select: none;
-		-khtml-user-select: none;
-		-moz-user-select: none;
-		-ms-user-select: none;
-		user-select: none;
-		overflow: hidden;
-	}
-	.rsBullet {
-		display: inline-block;
-		*display:inline;
-		*zoom:1;
-		padding: 5px;
-		position: relative;
-		display: block;
-		float: left;
-		margin: 15px;
-		width: 20px;
-		height: 20px;
-		cursor: pointer;
-		border-radius:50%;
-		box-shadow: 0 0 0 2px rgba(255, 255, 255, 0);
-		-webkit-transition: box-shadow 0.3s ease;
-		transition: box-shadow 0.3s ease;
-
-	}
-
-	.rsBullet.rsNavSelected span {
-		background-color: white;
-		-webkit-transform: scale(0.4);
-		transform: scale(0.4);
-	}
-	.rsBullet.rsNavSelected{
-		box-shadow: 0 0 0 2px white;
-	}
 
 
-	.rsBullet span {
-		display: block;
-		top: 0;
-		left: 0;
-		width: 100%;
-		height: 100%;
-		outline: none;
-		border-radius: 50%;
-		background-color: #fff;
-		background-color: rgba(255, 255, 255, 0.7);
-		text-indent: -999em; /* make the text accessible to screen readers */
-		cursor: pointer;
-		position: absolute;
-		border: 2px solid #fff;
-		-webkit-transition: border-color 0.3s ease;
-		transition: border-color 0.3s ease;
+	// .rsBullets {
+	// 	position: absolute;
+	// 	z-index: 3;
+	// 	top:225px;
+	// 	right:0%;
+	// 	padding: 4px;
+	// 	width: 50px;
+	// 	height:auto;
+	// 	margin: 20px auto;
+	// 	background: $red;
+	// 	float: left;
+	// 	text-align: center;
+	// 	display: inline-block;
+	// 	//display: none;
+	// 	margin: 0;
+	// 	padding: 0;
+	// 	list-style: none;
+	// 	cursor: default;
+	// 	-webkit-touch-callout: none;
+	// 	-webkit-user-select: none;
+	// 	-khtml-user-select: none;
+	// 	-moz-user-select: none;
+	// 	-ms-user-select: none;
+	// 	user-select: none;
+	// 	overflow: hidden;
+	// }
+	// .rsBullet {
+	// 	display: inline-block;
+	// 	*display:inline;
+	// 	*zoom:1;
+	// 	padding: 5px;
+	// 	position: relative;
+	// 	display: block;
+	// 	float: left;
+	// 	margin: 15px;
+	// 	width: 20px;
+	// 	height: 20px;
+	// 	cursor: pointer;
+	// 	border-radius:50%;
+	// 	box-shadow: 0 0 0 2px rgba(255, 255, 255, 0);
+	// 	-webkit-transition: box-shadow 0.3s ease;
+	// 	transition: box-shadow 0.3s ease;
 
-	}
+	// }
 
-	.rsBullet span:focus {
-		outline: none;
-	}
-	.rsBullet:nth-child(4n),
-	.rsBullet:nth-child(4n-3) {
-		background-color: rgba(0, 0, 0, 0.05);
-	}
+	// .rsBullet.rsNavSelected span {
+	// 	background-color: white;
+	// 	-webkit-transform: scale(0.4);
+	// 	transform: scale(0.4);
+	// }
+	// .rsBullet.rsNavSelected{
+	// 	box-shadow: 0 0 0 2px white;
+	// }
+
+
+	// .rsBullet span {
+	// 	display: block;
+	// 	top: 0;
+	// 	left: 0;
+	// 	width: 100%;
+	// 	height: 100%;
+	// 	outline: none;
+	// 	border-radius: 50%;
+	// 	background-color: #fff;
+	// 	background-color: rgba(255, 255, 255, 0.7);
+	// 	text-indent: -999em; /* make the text accessible to screen readers */
+	// 	cursor: pointer;
+	// 	position: absolute;
+	// 	border: 2px solid #fff;
+	// 	-webkit-transition: border-color 0.3s ease;
+	// 	transition: border-color 0.3s ease;
+
+	// }
+
+	// .rsBullet span:focus {
+	// 	outline: none;
+	// }
+	// .rsBullet:nth-child(4n),
+	// .rsBullet:nth-child(4n-3) {
+	// 	background-color: rgba(0, 0, 0, 0.05);
+	// }
 
 
 
-	.rsBullet span::after {
-		content: '';
-		position: absolute;
-		top: 0;
-		left: 0;
-		width: 100%;
-		height: 100%;
-		visibility: hidden;
-		background: #c44d48;
-		border-radius: 50%;
-		box-shadow: 0 0 1px #c44d48;
-		opacity: 0;
-		-webkit-transform: scale(3);
-		transform: scale(3);
-		-webkit-transition: opacity 0.3s ease, -webkit-transform 0.3s ease, visibility 0s 0.3s;
-		transition: opacity 0.3s ease, transform 0.3s ease, visibility 0s 0.3s;
-	}
+	// .rsBullet span::after {
+	// 	content: '';
+	// 	position: absolute;
+	// 	top: 0;
+	// 	left: 0;
+	// 	width: 100%;
+	// 	height: 100%;
+	// 	visibility: hidden;
+	// 	background: #c44d48;
+	// 	border-radius: 50%;
+	// 	box-shadow: 0 0 1px #c44d48;
+	// 	opacity: 0;
+	// 	-webkit-transform: scale(3);
+	// 	transform: scale(3);
+	// 	-webkit-transition: opacity 0.3s ease, -webkit-transform 0.3s ease, visibility 0s 0.3s;
+	// 	transition: opacity 0.3s ease, transform 0.3s ease, visibility 0s 0.3s;
+	// }
 
-	.rsBullet span:hover,
-	.rsBullet span:focus,
-	.rsBullet span.current a {
-		border-color: #c44d48;
-	}
+	// .rsBullet span:hover,
+	// .rsBullet span:focus,
+	// .rsBullet span.current a {
+	// 	border-color: #c44d48;
+	// }
 
-	.rsBullet.current span::after {
-		visibility: visible;
-		opacity: 1;
-		-webkit-transform: scale(1);
-		transform: scale(1);
-		-webkit-transition: opacity 0.3s ease, -webkit-transform 0.3s ease;
-		transition: opacity 0.3s ease, transform 0.3s ease;
-	}
+	// .rsBullet.current span::after {
+	// 	visibility: visible;
+	// 	opacity: 1;
+	// 	-webkit-transform: scale(1);
+	// 	transform: scale(1);
+	// 	-webkit-transition: opacity 0.3s ease, -webkit-transform 0.3s ease;
+	// 	transition: opacity 0.3s ease, transform 0.3s ease;
+	// }
 
 
 
