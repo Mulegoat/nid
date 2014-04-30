@@ -8,8 +8,8 @@ Stylesheet: Page Header Module Stylesheet
 
 
 .page-title--news{
-	position: relative;
-	left: 100%;
+	position: absolute;
+	left: 0;
 	display: inline-block;
 	z-index: 11;
 	padding: 0 1em;

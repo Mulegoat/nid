@@ -255,6 +255,10 @@ jQuery(document).ready(function($) {
   .register('screen and (min-width: 768px)', {
       setup: function(){
 
+      },
+      match : function () {
+          console.log("handler 768up matched");
+
             //Section Scroll
             (function sectionScroll (){
                 var scrollSection = 1;
@@ -264,21 +268,18 @@ jQuery(document).ready(function($) {
                     if(scrollSection < 20){
                       scrollSection++;
                     }
-                    TweenLite.to(window, 1, {scrollTo:{y:$(".section-" + scrollSection).offset().top-0}, ease:Power2.easeOut});
+                    TweenLite.to(window, 1, {scrollTo:{y:$(".section-" + scrollSection).offset().top-100}, ease:Power2.easeOut});
                   });
 
                   $("a.nextSection").click(function(e){
                     e.preventDefault();
                     if(scrollSection > 1){
                       scrollSection--;
-                      TweenLite.to(window, 1, {scrollTo:{y:$(".section-" + scrollSection).offset().top-0}, ease:Power2.easeOut});
+                      TweenLite.to(window, 1, {scrollTo:{y:$(".section-" + scrollSection).offset().top-100}, ease:Power2.easeOut});
                     }
                   });
             })();
 
-      },
-      match : function () {
-          console.log("handler 768up matched");
 
         //Masonry Layout
         (function masonryLayout(){
@@ -306,9 +307,32 @@ jQuery(document).ready(function($) {
   .register('screen and (min-width:1240px)',{
       setup: function(){
 
+
       },
       match : function () {
           console.log("handler 1240up matched");
+
+          //Section Scroll
+          (function sectionScroll (){
+              var scrollSection = 1;
+
+                $("a.prevSection").click(function(e){
+                  e.preventDefault();
+                  if(scrollSection < 20){
+                    scrollSection++;
+                  }
+                  TweenLite.to(window, 1, {scrollTo:{y:$(".section-" + scrollSection).offset().top-0}, ease:Power2.easeOut});
+                });
+
+                $("a.nextSection").click(function(e){
+                  e.preventDefault();
+                  if(scrollSection > 1){
+                    scrollSection--;
+                    TweenLite.to(window, 1, {scrollTo:{y:$(".section-" + scrollSection).offset().top-0}, ease:Power2.easeOut});
+                  }
+                });
+          })();
+
 
           //Remove from DOM
           (function removeElements(){
