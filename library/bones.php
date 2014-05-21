@@ -137,13 +137,13 @@ function bones_scripts_and_styles() {
     wp_register_script( 'jquery-mm', get_stylesheet_directory_uri() . '/library/js/libs/jquery.mmenu.min.js', array('jquery'), '4.1.6', false );
 
     // TweenMax
-    wp_register_script( 'gsap-tweenmax', ("http://cdnjs.cloudflare.com/ajax/libs/gsap/1.11.6/TweenMax.min.js"), false, '1.11.6', false);
+    wp_register_script( 'gsap-tweenmax', ("http://cdnjs.cloudflare.com/ajax/libs/gsap/1.11.8/TweenMax.min.js"), false, '1.11.8', false);
 
     // TweenMax scrollToPlugin
-    wp_register_script( 'gsap-scrollto', ("http://cdnjs.cloudflare.com/ajax/libs/gsap/1.11.6/plugins/ScrollToPlugin.min.js"), false, '1.11.6', false);
+    wp_register_script( 'gsap-scrollto', ("http://cdnjs.cloudflare.com/ajax/libs/gsap/1.11.8/plugins/ScrollToPlugin.min.js"), false, '1.11.8', false);
 
     // TweenMax JQuery
-    wp_register_script( 'gsap-jquery', ("http://cdnjs.cloudflare.com/ajax/libs/gsap/1.11.6/jquery.gsap.min.js"), false, '1.11.6', false);
+    wp_register_script( 'gsap-jquery', ("http://cdnjs.cloudflare.com/ajax/libs/gsap/1.11.8/jquery.gsap.min.js"), false, '1.11.8', false);
 
     // jquery easing
     wp_register_script( 'jquery-easing', get_stylesheet_directory_uri() . '/library/js/libs/jquery.easing.1.3.min.js', array('jquery'), '1.3.0', false );

@@ -385,6 +385,18 @@ jQuery(document).ready(function($) {
 
               });
 
+              //Check for clicks outside the parent element to close copy container
+              $(document).on('click', function(event) {
+                if (!$(event.target).closest('#copyContainer').length) {
+                      $(".closeContent").addClass("is--hidden");
+                      $(".closeContent").removeClass("is--active");
+                      $(".openContent").addClass("is--active");
+                      $(".openContent").removeClass("is--hidden");
+                      TweenLite.to($copyContainer, 0.25, {right:"-50%", ease:Power2.easeOut});
+                      TweenLite.to($rsContent, 0.4, {opacity:"1", delay:0.2, ease:Power2.easeOut});
+                      console.log("Copy Hidden");
+                }
+              });
 
           })();
 
