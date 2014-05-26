@@ -88,20 +88,28 @@ single-bookmarks.php
 
 											<div class="cf">
 										    	<h1 class="h1 custom-post-type-title"><?php the_title(); ?></h1>
-												<p class="tags"><?php echo get_the_term_list( get_the_ID(), 'boat_cat', '<span class="tags-title">' . __( 'Class:', 'bonestheme' ) . '</span> ', ', ' ) ?></p>
+												<p class="tags"><?php echo get_the_term_list( get_the_ID(), 'boat_cat', '<span class="tags-title">' . __( 'Category:', 'bonestheme' ) . '</span> ', ', ' ) ?></p>
+												<p class="tags"><?php echo get_the_term_list( get_the_ID(), 'boat-classes', '<span class="tags-title">' . __( 'Class:', 'bonestheme' ) . '</span> ', ', ' ) ?></p>
 											</div>
 
 										</header>
 
+										<div class="video--inline">
+											<?php the_field('video_link'); ?>
+										</div>
+
 										<section class="entry-content cf">
 
-											<p><?php the_field('client_brief');?></p>
+											<div class="project__copy">
+												<p><?php the_field('client_brief');?></p>
+												<p><?php the_field('photo_attr');?></p>
+											</div>
 
 										</section>
 
 										<footer id="relatedArticles" class="cf">
 
-											<h2 class="h2">Other Yachts</h2>
+											<h2 class="h2">Related Yachts</h2>
 
 											<div class="container-fluid">
 												<div class="row">
@@ -114,7 +122,7 @@ single-bookmarks.php
 
 															// get the custom post type's taxonomy terms
 
-															$custom_taxterms = wp_get_object_terms( $post->ID, 'boat_cat', array('fields' => 'ids') );
+															$custom_taxterms = wp_get_object_terms( $post->ID, 'boat-classes', array('fields' => 'ids') );
 															// arguments
 															$args = array(
 															'post_type' => 'boat',
@@ -123,7 +131,7 @@ single-bookmarks.php
 															'orderby' => 'rand',
 															'tax_query' => array(
 															    array(
-															        'taxonomy' => 'boat_cat',
+															        'taxonomy' => 'boat-classes',
 															        'field' => 'id',
 															        'terms' => $custom_taxterms
 															    )

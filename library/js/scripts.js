@@ -361,40 +361,38 @@ jQuery(document).ready(function($) {
 
               $openCopy.click(function(e) {
                   e.preventDefault();
-                      $(".openContent").addClass("is--hidden");
-                      $(".openContent").removeClass("is--active");
-                      $(".closeContent").addClass("is--active");
-                      $(".closeContent").removeClass("is--hidden");
-                      // slide copy in
-                      TweenLite.to($copyContainer, 0.25, {right:"0%", ease:Power2.easeOut});
-                      TweenLite.to($rsContent, 0.4, {opacity:"0.10", delay:0.2, ease:Power2.easeOut});
-                      console.log("Copy Inview");
-
+                    $(".openContent").addClass("is--hidden");
+                    $(".openContent").removeClass("is--active");
+                    $(".closeContent").addClass("is--active");
+                    $(".closeContent").removeClass("is--hidden");
+                    // slide copy in
+                    TweenLite.to($copyContainer, 0.25, {right:"0%", ease:Power2.easeOut});
+                    TweenLite.to($rsContent, 0.4, {opacity:"0.10", delay:0.2, ease:Power2.easeOut});
+                    console.log("Copy Inview");
               });
 
               $closeCopy.click(function(e) {
                   e.preventDefault();
-                      $(".closeContent").addClass("is--hidden");
-                      $(".closeContent").removeClass("is--active");
-                      $(".openContent").addClass("is--active");
-                      $(".openContent").removeClass("is--hidden");
-                      // slide copy out
-                      TweenLite.to($copyContainer, 0.25, {right:"-50%", ease:Power2.easeOut});
-                      TweenLite.to($rsContent, 0.4, {opacity:"1", delay:0.2, ease:Power2.easeOut});
-                      console.log("Copy Hidden");
-
+                    $(".closeContent").addClass("is--hidden");
+                    $(".closeContent").removeClass("is--active");
+                    $(".openContent").addClass("is--active");
+                    $(".openContent").removeClass("is--hidden");
+                    // slide copy out
+                    TweenLite.to($copyContainer, 0.25, {right:"-50%", ease:Power2.easeOut});
+                    TweenLite.to($rsContent, 0.4, {opacity:"1", delay:0.2, ease:Power2.easeOut});
+                    console.log("Copy Hidden");
               });
 
               //Check for clicks outside the parent element to close copy container
               $(document).on('click', function(event) {
                 if (!$(event.target).closest('#copyContainer').length) {
-                      $(".closeContent").addClass("is--hidden");
-                      $(".closeContent").removeClass("is--active");
-                      $(".openContent").addClass("is--active");
-                      $(".openContent").removeClass("is--hidden");
-                      TweenLite.to($copyContainer, 0.25, {right:"-50%", ease:Power2.easeOut});
-                      TweenLite.to($rsContent, 0.4, {opacity:"1", delay:0.2, ease:Power2.easeOut});
-                      console.log("Copy Hidden");
+                    $(".closeContent").addClass("is--hidden");
+                    $(".closeContent").removeClass("is--active");
+                    $(".openContent").addClass("is--active");
+                    $(".openContent").removeClass("is--hidden");
+                    TweenLite.to($copyContainer, 0.25, {right:"-50%", ease:Power2.easeOut});
+                    TweenLite.to($rsContent, 0.4, {opacity:"1", delay:0.2, ease:Power2.easeOut});
+                    console.log("Copy Hidden");
                 }
               });
 

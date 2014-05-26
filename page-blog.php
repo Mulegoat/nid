@@ -9,9 +9,11 @@
 
 				<div id="inner-content" class="inner-page cf">
 
-						<div id="main" class="m-all t-all d-all cf" role="main">
+					<div id="main" class="m-all t-all d-all cf" role="main">
 
-							<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+						<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+
+						<div class="m-all t-all d-2of3 grid-center cf">
 
 							<article id="post-<?php the_ID(); ?>" <?php post_class( 'cf' ); ?> role="article" itemscope itemtype="http://schema.org/BlogPosting">
 
@@ -19,7 +21,7 @@
 									<h1 class="h1 page-title--news" itemprop="headline"><?php the_title(); ?></h1>
 								</header> <?php // end article header ?>
 
-							    <section class="m-all t-all d-2of3 entry-content cf" itemprop="articleBody">
+							    <section class="entry-content cf" itemprop="articleBody">
 
 									<?php
 
@@ -47,7 +49,6 @@
 													<header>
 														<h2 class="h1 single-title"><a class="header-link" href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h2>
 														<p class="byline vcard">Written by <?php the_author(); ?></p>
-
 													</header>
 
 													<section>
@@ -92,9 +93,11 @@
 
 							<?php endif; ?>
 
-						</div> <?php // end #main ?>
+						</div>
 
-						<?php //get_sidebar(); ?>
+					</div> <?php // end #main ?>
+
+					<?php //get_sidebar(); ?>
 
 				</div> <?php // end #inner-content ?>
 

@@ -16,6 +16,10 @@ Stylesheet: Project Module Stylesheet
 	bottom: 0;
 }
 
+.video--inline{
+	margin:0 0 1em 0;
+}
+
 @media only screen and (min-width: 768px) {
 
 	.article-copy{
@@ -24,6 +28,7 @@ Stylesheet: Project Module Stylesheet
 		right: 0;
 		z-index: 11;
 	}
+
 }
 @media only screen and (min-width: 900px){
 
@@ -49,15 +54,20 @@ Stylesheet: Project Module Stylesheet
 	}
 
 	.boat p{
+	}
+	.project__copy{
+		float: left;
 		margin-bottom:1em;
 	}
+
+
 
 }
 
 @media only screen and (min-width: 1440px) {
 	.single-boat{
 		.footer{
-			display: none;
+			//display: none;
 		}
 	}
 
