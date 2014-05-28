@@ -39,18 +39,18 @@ Template Name: Contact Us
 									<ul class="m-all t-all d-all cf first company-info">
 										<li class="company-info__item">
 											<span class="company-info__icon icon-location"></span>
-											<span class="company-info__item--address--name">Nigel Irens Design,</span>
-											<span class="company-info__item--address">Tanners Yard House,</span>
-											<span class="company-info__item--address">Ashburton,</span>
-											<span class="company-info__item--address">Devon,</span>
-											<span class="company-info__item--address">TQ13 7DD</span>
+											<span class="company-info__item--address--name"><?php the_field('company_name'); ?></span>
+											<span class="company-info__item--address"><?php the_field('address_1'); ?></span>
+											<span class="company-info__item--address"><?php the_field('address_2'); ?></span>
+											<span class="company-info__item--address"><?php the_field('address_3'); ?></span>
+											<span class="company-info__item--address"><?php the_field('address_4'); ?></span>
 										</li>
-										<li class="company-info__item"><span class="company-info__icon icon-phone"></span><a target="_blank" href="tel:01364653503">+44 (0)1364 652 554</a></li>
+										<li class="company-info__item"><span class="company-info__icon icon-phone"></span><a target="_blank" href="<?php the_field('telephone_link'); ?>"><?php the_field('telephone_number'); ?></a></li>
 										<li class="company-info__item"><span class="company-info__icon icon-envelop-opened"></span><a href="mailto:<?php echo get_option('admin_email'); ?>">Via Email</a></li>
 									</ul>
 
 								    <div class="m-all t-all d-all cf first">
-								    	<a class="button" target="_blank" href="https://www.google.com/maps/dir//Tanners+Yard+House,+St+Lawrence+Ln,+Ashburton,+Newton+Abbot+TQ13+7DD,+UK/@50.5137175,-3.7894676,13z/data=!4m8!4m7!1m0!1m5!1m1!1s0x486d0272b2356c3f:0x9af698e9edf7d2df!2m2!1d-3.7549202!2d50.5150271">Get Directions ></a>
+								    	<a class="button" target="_blank" href="<?php the_field('directions_link'); ?>">Get Directions ></a>
 								    </div>
 
 								</div>

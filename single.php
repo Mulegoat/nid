@@ -44,8 +44,7 @@
 								  'posts_per_page' => 1,
 								  'post_status' => 'published',
 								  'post__not_in' => array($this_post),
-								  'order' => 'DESC',
-								  'caller_get_posts'=> 1
+								  'orderby' => 'rand'
 								);
 
 								// the query
@@ -59,7 +58,7 @@
 									<article id="post-<?php the_ID(); ?>" <?php post_class('m-all t-all d-all clearfix'); ?> role="article" data-id="<?php the_ID(); ?>">
 
 										<div class="blog__intro">
-											<img class="wp-post-image" src="<?php the_field('main_image')?>" />
+											<img class="wp-post-image" src="<?php the_field('main_image')?>">
 											<div class="blogCover">
 												<div class="l-single-column">
 										    		<header class="blogCover__header box--theme6 island clearfix">
@@ -72,7 +71,6 @@
 										    	</div>
 									    	</div>
 									    </div>
-
 
 									</article> <!-- end article -->
 

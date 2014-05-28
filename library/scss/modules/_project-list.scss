@@ -5,6 +5,13 @@ Author: Marco Terrinoni (MULARAM)
 Stylesheet: Project List Module Stylesheet
 
 ******************************************************************/
+.container-fluid{
+	min-height: 40px;
+}
+
+#portfolio-projects{
+	min-height: 40px !important;
+}
 
 #projects{
 	margin: 0;

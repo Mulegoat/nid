@@ -44,7 +44,7 @@ single-bookmarks.php
 											// get_posts in same custom taxonomy
 											$postlist_args = array(
 											   'posts_per_page'  => -1,
-											   'orderby'         => 'menu_order title',
+											   'orderby'         => 'menu_order',
 											   'order'           => 'ASC',
 											   'post_type'       => 'boat'
 											   //'your_custom_taxonomy' => 'your_custom_taxonomy_term'
@@ -64,9 +64,15 @@ single-bookmarks.php
 											if ( !empty($previd) ) {
 											   echo '<li class="scrollNav__list__item"><span class="scrollNav__list__item__label">Prev Boat</span><a class="scrollNav__list__item__link icon icon-arrow-left" href="' . get_permalink($previd). '"></a></li>';
 											}
+											if ( empty($previd) ) {
+											   echo '<li class="scrollNav__list__item"><span class="scrollNav__list__item__label">Prev Boat</span><a class="scrollNav__list__item__link icon icon-arrow-left" href="http://localhost/nigelirens/boats/sail-boats/apc78"></a></li>';
+											}
 
 											if ( !empty($nextid) ) {
 											   echo '<li class="scrollNav__list__item"><span class="scrollNav__list__item__label">Next Boat</span><a class="scrollNav__list__item__link icon icon-arrow-right" href="' . get_permalink($nextid). '"></a></li>';
+											}
+											if ( empty($nextid) ) {
+											   echo '<li class="scrollNav__list__item"><span class="scrollNav__list__item__label">Next Boat</span><a class="scrollNav__list__item__link icon icon-arrow-right" href="http://localhost/nigelirens/boats/power-boats/ilan"></a></li>';
 											}
 										?>
 
@@ -116,7 +122,7 @@ single-bookmarks.php
 													<div class="m-all t-all d-all">
 														<div class="row portfolio-full-width ">
 															<div id="portfolio-projects" class="no-sortable grid-portfolio">
-															<!-- begin custom related loop, isa -->
+															<?php // begin custom related loop ?>
 
 															<?php
 
@@ -148,7 +154,7 @@ single-bookmarks.php
 																	<div class="item-container  ">
 																		<div class="hover-wrap">
 																			<article id="post-<?php the_ID(); ?>" <?php post_class( 'cf' ); ?> role="article">
-																				<a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><!-- <span class="cont"><i class="icon-plus2"></i></span> --></a>
+																				<a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"></a>
 																				<a class="box__thumb" href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_post_thumbnail( 'bones-thumb-360' ); ?></a>
 																				<header class="project-name">
 																					<div class="va">
@@ -165,6 +171,7 @@ single-bookmarks.php
 																<?php
 															endwhile;
 															echo '</ul>';
+															else: echo '<div>There are no related yachts</div>';
 															endif;
 															// Reset Post Data
 															wp_reset_postdata();

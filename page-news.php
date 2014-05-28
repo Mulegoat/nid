@@ -42,7 +42,7 @@
 												<article id="post-<?php the_ID(); ?>" <?php post_class('m-all t-all d-all box--theme3 cf'); ?> role="article" data-id="<?php the_ID(); ?>">
 
 													<div class="box__thumb m-all t-all d-all">
-														<a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_post_thumbnail( 'bones-thumb-1600' ); ?></a>
+														<a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><img class="wp-post-image" src="<?php the_field('main_image'); ?>"></a>
 													</div>
 													<div class="box__copy m-all t-all d-2of3 island">
 
