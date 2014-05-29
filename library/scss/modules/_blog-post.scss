@@ -6,14 +6,20 @@ Stylesheet: Blog Post Module Stylesheet
 
 ******************************************************************/
 
-
+.l-single-col img {
+	display: block;
+	width: 100%;
+	height: auto;
+	margin-bottom: 2em;
+}
 
 .blogCover__excerpt{
 	display: none;
 }
 .blogCover__header{
-	padding:$padding*2;
+	padding-bottom:0 !important;
 }
+
 
 .blog__scrollTo{
 	font-size:2em;
@@ -33,22 +39,27 @@ Stylesheet: Blog Post Module Stylesheet
 
 @media only screen and (min-width: 768px) {
 	.blogCover {
-		position: absolute;
+		//position: absolute;
 		left: 0;
 		right: 0;
 		bottom: 0px;
 		margin:0 auto;
-		width:50%;
+		width:75%;
 	}
 
 	.blog__header{
 		height: 100%;
 	}
 
+	.blogCover__next{
+		position: absolute;
+		z-index: 10;
+	}
 }
 
 @media only screen and (min-width: 1030px) {
 	.blogCover {
+		width:50%;
 	}
 
 }

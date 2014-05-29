@@ -13,9 +13,9 @@
 								<div class="blog__intro cf">
 									<img class="wp-post-image" src="<?php the_field('main_image')?>" />
 									<div class="blogCover">
-							    		<header class="blogCover__header box--theme6 cf">
+							    		<header class="blogCover__header box--theme3 island cf">
 											<h1 class="h1 single-title"><?php the_title(); ?></h1>
-											<p class="byline vcard">Published <time class="updated" datetime="<?php echo the_time('Y-m-j'); ?>" pubdate><?php the_time('F jS, Y'); ?></time> by <?php the_author(); ?></p>
+											<p class="byline vcard">Published <time class="updated" datetime="<?php echo the_time('Y-m-j'); ?>" pubdate><?php the_time('F jS, Y'); ?></time></p>
 <!-- 											<div class="blog__scrollTo text-center">
 												<a id="scroll-link" href="#"><span class="icon-arrow-down"></span></a>
 											</div> -->
@@ -42,7 +42,7 @@
 								$args=array(
 								  'cat' =>1,
 								  'posts_per_page' => 1,
-								  'post_status' => 'published',
+								  'post_status' => 'publish',
 								  'post__not_in' => array($this_post),
 								  'orderby' => 'rand'
 								);
@@ -55,21 +55,18 @@
 								  <!-- the loop -->
 								  <?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
 
-									<article id="post-<?php the_ID(); ?>" <?php post_class('m-all t-all d-all clearfix'); ?> role="article" data-id="<?php the_ID(); ?>">
+									<article id="post-<?php the_ID(); ?>" <?php post_class('m-all t-all d-all'); ?> role="article" data-id="<?php the_ID(); ?>">
 
 										<div class="blog__intro">
-											<img class="wp-post-image" src="<?php the_field('main_image')?>">
-											<div class="blogCover">
-												<div class="l-single-column">
-										    		<header class="blogCover__header box--theme6 island clearfix">
-										    			<p class="h5"><?php echo('Next Article...');?></p>
-														<h2 class="single-title"><a class="header-link" href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h2>
-														<p><?php the_excerpt(); ?></p>
-														<p><a class="button--theme1" href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>">Read More ></a></p>
-
-										    		</header>
+									    	<header class="blogCover__next m-all t-all d-all">
+												<div class="m-all t-1of2 d-3of4 last-col box--theme7 cf islet">
+									    			<h5 class="h5"><?php echo('Next Article...');?></h5>
+													<h2 class="next-article-title"><a class="header-link" href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h2>
+													<?php //the_excerpt(); ?>
+													<div><a class="button" href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>">Read More ></a></div>
 										    	</div>
-									    	</div>
+									    	</header>
+											<img class="wp-post-image" src="<?php the_field('main_image')?>">
 									    </div>
 
 									</article> <!-- end article -->

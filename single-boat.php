@@ -46,7 +46,8 @@ single-bookmarks.php
 											   'posts_per_page'  => -1,
 											   'orderby'         => 'menu_order',
 											   'order'           => 'ASC',
-											   'post_type'       => 'boat'
+											   'post_type'       => 'boat',
+											   'post_status'	 =>  'publish'
 											   //'your_custom_taxonomy' => 'your_custom_taxonomy_term'
 											);
 											$postlist = get_posts( $postlist_args );
@@ -65,14 +66,14 @@ single-bookmarks.php
 											   echo '<li class="scrollNav__list__item"><span class="scrollNav__list__item__label">Prev Boat</span><a class="scrollNav__list__item__link icon icon-arrow-left" href="' . get_permalink($previd). '"></a></li>';
 											}
 											if ( empty($previd) ) {
-											   echo '<li class="scrollNav__list__item"><span class="scrollNav__list__item__label">Prev Boat</span><a class="scrollNav__list__item__link icon icon-arrow-left" href="http://localhost/nigelirens/boats/sail-boats/apc78"></a></li>';
+											   echo '<li class="scrollNav__list__item"><span class="scrollNav__list__item__label">Prev Boat</span><a class="scrollNav__list__item__link icon icon-arrow-left" href="http://www.nigelirens.com/boats/sail-boats/apc78"></a></li>';
 											}
 
 											if ( !empty($nextid) ) {
 											   echo '<li class="scrollNav__list__item"><span class="scrollNav__list__item__label">Next Boat</span><a class="scrollNav__list__item__link icon icon-arrow-right" href="' . get_permalink($nextid). '"></a></li>';
 											}
 											if ( empty($nextid) ) {
-											   echo '<li class="scrollNav__list__item"><span class="scrollNav__list__item__label">Next Boat</span><a class="scrollNav__list__item__link icon icon-arrow-right" href="http://localhost/nigelirens/boats/power-boats/ilan"></a></li>';
+											   echo '<li class="scrollNav__list__item"><span class="scrollNav__list__item__label">Next Boat</span><a class="scrollNav__list__item__link icon icon-arrow-right" href="http://www.nigelirens.com/boats/power-boats/ilan"></a></li>';
 											}
 										?>
 

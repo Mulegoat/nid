@@ -28,7 +28,8 @@
 										//Return Posts for News
 										$args=array(
 										  'cat' =>1,
-										  'posts_per_page' => -1
+										  'posts_per_page' => -1,
+										  'post_status' => 'publish'
 										);
 
 										// the query
@@ -48,7 +49,7 @@
 
 														<header>
 															<h2 class="h1 single-title"><a class="header-link" href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h2>
-															<p class="byline vcard">Written by <?php the_author(); ?></p>
+															<p class="byline vcard">Published <time class="updated" datetime="<?php echo the_time('Y-m-j'); ?>" pubdate><?php the_time('F jS, Y'); ?></time></p>
 														</header>
 
 														<section>

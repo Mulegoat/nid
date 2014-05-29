@@ -334,12 +334,6 @@ jQuery(document).ready(function($) {
           })();
 
 
-          //Remove from DOM
-          (function removeElements(){
-            $("div").remove("#heroContent_mobile");
-          })();
-
-
         /* Set Home Page Intro Div to 100% of Window */
           (function resizeHeroContent(){
               var column_height = $("html").height();
@@ -463,7 +457,6 @@ jQuery(document).ready(function($) {
 
           //Remove Following elements from DOM
           (function removeFromDOM(){
-            $("div").remove("#heroContent_desktop");
             $("div").remove("#locationMap");
             $(".box-container").removeClass("scroll-pane");
           })();

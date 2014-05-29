@@ -89,7 +89,7 @@ over your project's layout.
   padding-right: 0;
 }
 .l-single-col{
-  width:50%;
+  width:100%;
   margin:0 auto;
 }
 .inner-page{
@@ -156,6 +156,8 @@ them however you see fit.
 @media (min-width: 768px) and (max-width: 1029px) {
 
 
+
+
   /*
    *establishing the extend within each breakpoint
   */
@@ -209,6 +211,10 @@ them however you see fit.
 /* Landscape to small desktop */
 @media (min-width: 1030px) {
 
+.l-single-col{
+  width:50%;
+  margin:0 auto;
+}
 
   /*
    *establishing the extend within each breakpoint
